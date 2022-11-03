@@ -30,7 +30,7 @@ def suggest_page():
     snow_answer = drop_down_form['snow_answer']
     rain_answer = drop_down_form['rain_answer']
     if snow_answer == 'yes' and rain_answer == 'no':
-        return flask.render_template('test.html')
+        return flask.render_template('suggest_page.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

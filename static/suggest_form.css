@@ -25,3 +25,10 @@ h1 {
     margin-right: auto;
     width: 50%;
 }
+
+.button_group {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
