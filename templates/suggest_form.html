@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <link rel="stylesheet" href={{ url_for('static', filename='suggest.css') }} />
+        <script src="{{url_for('static', filename='front_page.js')}}"></script>
+    </head>
+
+    <body>
+        <h2>get a suggestion!</h2>
+
+        <p>do you want to live somewhere with snow</p>
+        <form id="snow" class="suggest_form" action="/">
+            <select name="answer" id="snow_answer">
+                <option data-count="1" value="yes">yes</option>
+                <option data-count="2" value="no">no</option>
+            </select>
+            <input type="submit"/>
+        </form>
+    </body>
+</html>
