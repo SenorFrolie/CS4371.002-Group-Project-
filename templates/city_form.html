@@ -1,0 +1,12 @@
+<html>
+    <head>
+        <link rel="stylesheet" href={{ url_for('static', filename='city_form.css') }} />
+    </head>
+
+    <body>
+        <form action="/city_display" method="POST" class="city_form">
+            <input type="text" name="city_name" id="city name" placeholder="pick a city"/>
+            <input type="submit" value="get a suggestion"/>
+        </form>
+    </body>
+</html>

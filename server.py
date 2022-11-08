@@ -13,6 +13,24 @@ def front_page():
     '''
     return flask.render_template('front_page.html')
 
+@app.route('/city_form', methods=['POST', 'GET'])
+def city_form():
+    '''
+    this is the form that allows users to tell what information they want
+    '''
+
+    return flask.render_template('city_form.html')
+
+@app.route('/city_display', methods=['POST', 'GET'])
+def city_display():
+    '''
+    this is the function that will display all the city information
+    '''
+
+    city_name = request.form.get('city_name')
+
+    return flask.render_template('city_display.html', city=city_name)
+
 @app.route('/suggest_form', methods=['POST', 'GET'])
 def suggest_form():
     '''
