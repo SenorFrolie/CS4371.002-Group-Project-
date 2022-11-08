@@ -12,7 +12,7 @@ class CityInfo:
     '''
 
     @staticmethod
-    def get_info():
+    def get_info(location):
         '''
         this function doesnt have a realy purpose right now
         '''
@@ -20,6 +20,8 @@ class CityInfo:
         geo_api_key = os.getenv('geo_api_key')
 
         url = "https://wft-geo-db.p.rapidapi.com/v1/geo/cities/Q60"
+
+        querystring = {"location":location}
 
         headers = {
             "X-RapidAPI-Key": geo_api_key,
