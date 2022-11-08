@@ -3,6 +3,8 @@ this is the server file that defines all our routes and how our website is going
 '''
 import flask
 from flask import request
+import city_data
+from city_data import CityInfo
 
 app = flask.Flask(__name__)
 
@@ -28,14 +30,17 @@ def city_display():
     '''
 
     city_name = request.form.get('city_name')
+    city_object = CityInfo()
+    string = city_object.get_info()
 
-    return flask.render_template('city_display.html', city=city_name)
+    return flask.render_template('city_display.html', city=city_name, word=string)
 
 @app.route('/suggest_form', methods=['POST', 'GET'])
 def suggest_form():
     '''
     this is the page where we will ask users their suggestions and retrieve their answers
     '''
+
     return flask.render_template('suggest_form.html')
 
 @app.route('/suggest_page', methods=['POST', 'GET'])
@@ -43,6 +48,7 @@ def suggest_page():
     '''
     this is the page that will show the users suggestions and prompt them if they want to do it again
     '''
+
     snow_answer = request.form.get('snow_answer')
     drop_down_form = flask.request.form
     snow_answer = drop_down_form['snow_answer']
