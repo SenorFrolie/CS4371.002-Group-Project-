@@ -1,6 +1,10 @@
 '''
 this is the file that will get all our info from our city api
 '''
+import os
+import requests
+from dotenv import load_dotenv
+load_dotenv()
 
 class CityInfo:
     '''
@@ -13,4 +17,16 @@ class CityInfo:
         this function doesnt have a realy purpose right now
         '''
 
+        geo_api_key = os.getenv('geo_api_key')
+
+        url = "https://wft-geo-db.p.rapidapi.com/v1/geo/cities/Q60"
+
+        headers = {
+            "X-RapidAPI-Key": geo_api_key,
+            "X-RapidAPI-Host": "wft-geo-db.p.rapidapi.com"
+        }
+
+        response = requests.request("GET", url, headers=headers)
+
+        print(response.text)
         return 'info'
