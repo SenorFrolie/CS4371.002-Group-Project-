@@ -22,15 +22,17 @@ class CityInfo:
 
         geo_api_key = os.getenv("geo_api_key")
 
-        url = "https://wft-geo-db.p.rapidapi.com/v1/geo/cities/Q60"
-        querystring = {"location": location}
+        url = "https://wft-geo-db.p.rapidapi.com/v1/geo/cities"
+
+        querystring = {"location":"Austin"}
 
         headers = {
             "X-RapidAPI-Key": geo_api_key,
-            "X-RapidAPI-Host": "wft-geo-db.p.rapidapi.com",
+            "X-RapidAPI-Host": "wft-geo-db.p.rapidapi.com"
         }
 
-        response = requests.request("GET", url, headers=headers)
+
+        response = requests.request("GET", url, headers=headers, params=querystring)
         data = response.json()
         pretty_dson_data = json.dumps(data, indent = 1, sort_keys=True)
 
