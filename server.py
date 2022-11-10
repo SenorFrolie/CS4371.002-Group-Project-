@@ -3,7 +3,6 @@ this is the server file that defines all our routes and how our website is going
 """
 import flask
 from flask import request
-import city_data
 from city_data import CityInfo
 
 app = flask.Flask(__name__)
