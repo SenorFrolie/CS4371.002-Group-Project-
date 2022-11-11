@@ -4,6 +4,7 @@ this is the server file that defines all our routes and how our website is going
 import flask
 from flask import request
 from city_data import CityInfo
+from state_data import StateData
 
 app = flask.Flask(__name__)
 
@@ -13,6 +14,7 @@ def front_page():
     """
     this is the very first page that the user will see when the visit our site
     """
+
     return flask.render_template("front_page.html")
 
 
@@ -33,7 +35,7 @@ def city_display():
 
     city_name = request.form.get("city_name")
     city_object = CityInfo()
-    city_object.get_info('Austin')
+    city_object.get_info("Austin")
 
     return flask.render_template("city_display.html", city=city_name)
 
@@ -57,6 +59,9 @@ def suggest_page():
     drop_down_form = flask.request.form
     snow_answer = drop_down_form["snow_answer"]
     rain_answer = drop_down_form["rain_answer"]
+    for i in range(50):
+        if snow_answer == obj.alabama['snow']
+
     if snow_answer == "yes" and rain_answer == "no":
         return flask.render_template("suggest_page.html")
 
