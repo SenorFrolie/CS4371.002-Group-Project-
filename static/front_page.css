@@ -1,8 +1,54 @@
+*{
+    box-sizing: border-box;
+    border: #FFFFFF;
+}
+
+title{
+position: absolute;
+width: 123px;
+height: 95px;
+left: 658px;
+top: 0px;
+
+font-family: 'Libre Bodoni';
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+line-height: 45px;
+/* identical to box height */
+
+display: flex;
+align-items: center;
+
+color: #000000;
+}
+
+
+li,a {
+    font-family: 'Libre Baskerville';
+    font-weight: 500;
+    font-size: 20px;
+    color:  rgb(40, 44, 47);
+    text-decoration: none;
+}
+
+header{
+    width: 1400px;
+    height: 80px;
+    top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    background: #52888B;
+    align-items: center;
+    padding: 30px 10%;
+    margin: 0 auto;
+}
+
 body {
     font-family: Helvetica;
     color: rgb(255, 255, 255);
-    background-color: rgb(27, 26, 26);
-    background-image: linear-gradient(rgb(42, 95, 106),rgb(30, 27, 74));
+    background-color: rgb(199, 206, 173);
+    background-image: rgb(178, 187, 145);
     font-size: 12;
     text-align: left;
     padding: auto;
@@ -18,10 +64,66 @@ h1 {
     text-align: center;
 }
 
-/*styleling my image inad aligning it*/
-.image {
-    display: block;
-    margin-left: auto;
+
+.header_logo{
+    justify-content: flex-end;
+    align-items: center;
+    object-fit: contain;
+    display: flex;
     margin-right: auto;
-    width: 50%;
+
+
+}
+
+.surbuban_living{
+    width: 1441px;
+    height: 611px;
+    left: -1px;
+    top: 67px;
+
+    background: url(Old_Suburban_living.png);
+}
+
+
+.nav_links{
+    list-style: none;
+    
+}
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a {
+transition: all 0.3s ease 0s;
+}
+.nav_links li a:hover {
+color: white;
+}
+    
+.cta button{
+    width: 120px;
+    height: 30px;
+    left: 1400px;
+    top: 19px;
+
+    background: rgb(40, 44, 47);
+    border-radius: 6.25rem;
+
+    margin-left: 20px ;
+    font-family: 'Libre Bodoni';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 15px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    align-items: center;
+    color: #FFFFFF;
+
+}
+
+button:hover{
+    color: #0088a9;
 }
