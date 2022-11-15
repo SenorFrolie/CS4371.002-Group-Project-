@@ -20,12 +20,19 @@
 
         <h1>hello! what would you like to do?</h1>
     
+        <!--this takes the user to the page to get a suggested state-->
         <form action="/suggest_form" method="POST" class="goto_suggestion">
             <input class="suggestion" type="submit" value="get a suggestion"/>
         </form>
 
+        <!--this takes the user to the city page input form-->
         <form action="/city_form" method="POST" class="goto_suggestion">
             <input class="info_over_city" type="submit" value="get info over city"/>
+        </form>
+        
+        <!--this takes the user to the dashboard-->
+        <form action="/dashboard" method="POST" class="goto_suggestion">
+            <input type="submit" value="goto dashboard"/>
         </form>
     </body>
 </html>

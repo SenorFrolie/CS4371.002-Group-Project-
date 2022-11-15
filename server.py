@@ -61,10 +61,20 @@ def suggest_page():
     snow_answer = drop_down_form["snow_answer"]
     rain_answer = drop_down_form["rain_answer"]
     for i in range(50):
-        if snow_answer == obj.alabama['snow']:
-            x = NULL
-        if snow_answer == "yes" and rain_answer == "no":
-            return flask.render_template("suggest_page.html")
+        if snow_answer == drop_down_form["snow answer"]:
+            print("hoopla")
+
+    if snow_answer == "yes" and rain_answer == "no":
+        return flask.render_template("suggest_page.html")
+
+
+@app.route("/dashboard", methods=["POST", "GET"])
+def dashboard():
+    """
+    this is the dashboard page that will require the users to be logged in, this will lead users
+    """
+
+    return flask.render_template("dashboard.html")
 
 
 if __name__ == "__main__":
