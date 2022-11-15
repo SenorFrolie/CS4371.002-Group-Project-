@@ -3,6 +3,7 @@ this is the server file that defines all our routes and how our website is going
 """
 import flask
 from flask import request
+
 from city_data import CityInfo
 from state_data import StateData
 
@@ -60,10 +61,10 @@ def suggest_page():
     snow_answer = drop_down_form["snow_answer"]
     rain_answer = drop_down_form["rain_answer"]
     for i in range(50):
-        if snow_answer == obj.alabama['snow']
-
-    if snow_answer == "yes" and rain_answer == "no":
-        return flask.render_template("suggest_page.html")
+        if snow_answer == obj.alabama['snow']:
+            x = NULL
+        if snow_answer == "yes" and rain_answer == "no":
+            return flask.render_template("suggest_page.html")
 
 
 if __name__ == "__main__":

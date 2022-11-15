@@ -75,6 +75,55 @@ h1 {
 
 }
 
+.suggestion_Quiz{
+    background: rgb(40, 44, 47);
+    border-radius: 6.25rem;
+
+    margin-left: 20px ;
+    margin-top: 10px;
+    font-family: 'Libre Bodoni';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    border: none;
+    cursor: pointer;
+    color: #FFFFFF;
+    transition: all 0.3s ease 0s;
+    align-items: center;
+}
+
+.suggestion_Quiz:hover{
+    color: #0088a9;
+}
+
+.suggestion, .info_over_city{
+    background: rgb(40, 44, 47);
+    border-radius: 6.25rem;
+
+    margin-left: 20px ;
+    font-family: 'Libre Bodoni';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    color: #FFFFFF;
+    transition: all 0.3s ease 0s;
+
+}
+
+.suggestion:hover{
+    color: #0088a9;
+}
+
+
+.info_over_city:hover{
+    color: #0088a9;
+}
+
 .surbuban_living{
     width: 1441px;
     height: 611px;

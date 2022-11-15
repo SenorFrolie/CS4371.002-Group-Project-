@@ -6,25 +6,26 @@
         <script src="{{url_for('static', filename='front_page.js')}}"></script>
     </head>
     <header>
-        <title>My/City</title>
+        <title>My/State</title>
         <nav>
             <ul class="nav_links">
                 <li><a href="#">About</a></li>
             </ul>
         </nav>
-        <a class="cta" href="#"><button>Take The Quiz</button> </a>
+        <form action="/suggest_form" method="POST" class="goto_suggestion">
+            <input class="suggestion_Quiz" type="submit" value="Take the Quiz"/>
+        </form>
     </header>
     <body>
-
 
         <h1>hello! what would you like to do?</h1>
     
         <form action="/suggest_form" method="POST" class="goto_suggestion">
-            <input type="submit" value="get a suggestion"/>
+            <input class="suggestion" type="submit" value="get a suggestion"/>
         </form>
 
         <form action="/city_form" method="POST" class="goto_suggestion">
-            <input type="submit" value="get info over city"/>
+            <input class="info_over_city" type="submit" value="get info over city"/>
         </form>
     </body>
 </html>
