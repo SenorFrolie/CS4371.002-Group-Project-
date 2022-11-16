@@ -7,7 +7,7 @@ class StateData:
     """
     this is the class that will contain all our data form our states
     """
-    
+
     # '''
     # Template:
     # Each category with an explanation on it's use/how it's used
@@ -34,7 +34,6 @@ class StateData:
     # '''
 
     states = [
-    
         {
             'name': 'alabama',
             'id': 0,

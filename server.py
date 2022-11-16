@@ -57,19 +57,38 @@ def suggest_page():
     """
 
     drop_down_form = flask.request.form
-    snow_answer = drop_down_form["snow_answer"]
-    rain_answer = drop_down_form["rain_answer"]
-    rural_answer = drop_down_form["rain_answer"]
-    tax_answer = drop_down_form["rain_answer"]
-    coast_answer = drop_down_form["rain_answer"]
-    uni_answer = drop_down_form["rain_answer"]
-    mountain_answer = drop_down_form["rain_answer"]
-    desert_answer = drop_down_form["rain_answer"]
-    pop_answer = drop_down_form["rain_answer"]
-    water_answer = drop_down_form["rain_answer"]
+    snow = drop_down_form["snow_answer"]
+    rural = drop_down_form["snow_answer"]
+    tax = drop_down_form["snow_answer"]
+    rain = drop_down_form["snow_answer"]
+    coast = drop_down_form["snow_answer"]
+    income = drop_down_form["snow_answer"]
+    political = drop_down_form["snow_answer"]
+    university = drop_down_form["snow_answer"]
+    mountains = drop_down_form["snow_answer"]
+    desert = drop_down_form["snow_answer"]
+    population = drop_down_form["snow_answer"]
+    waterfront = drop_down_form["snow_answer"]
+    home = drop_down_form["snow_answer"]
+    crime = drop_down_form["snow_answer"]
 
-    if snow_answer == "yes" and rain_answer == "no":
-        return flask.render_template("suggest_page.html")
+    #         'snow': 2,
+    #         'rural_urban': 'rural',
+    #         'income_tax': 'yes',
+    #         'rain': 56,
+    #         'coastline': 'yes',
+    #         'avg_income': 51700,
+    #         'political_climate': 'conservative',
+    #         'university': 'none',
+    #         'mountains': 'no',
+    #         'desert': 'no',
+    #         'population': 5039877,
+    #         'waterfront': 'yes',
+    #         'home_price': 138000,
+    #         'crime_rate': 37
+    
+
+    return flask.render_template("suggest_page.html")
 
 
 @app.route("/dashboard", methods=["POST", "GET"])
