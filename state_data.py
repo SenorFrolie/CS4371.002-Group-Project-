@@ -9,36 +9,32 @@ class StateData:
 <<<<<<< HEAD
     """
 
-    states = [
-        {"name": "alabama", "snow": "no", "rain": "no", "ocean": "no"},
-        {"name": "arkansas", "snow": "yes", "rain": "no", "ocean": "no"},
-=======
-    '''
-    '''
-    Template:
-    Each category with an explanation on it's use/how it's used
-    'name': state name, string
-    'id': state id#, int. 0 is first alphabetically, 1 is 2nd, etc.
-    'points': point total for a state; all totals start at 0
-    Lines from here on relate to questions
+#======
+    # '''
+    # '''
+    # Template:
+    # Each category with an explanation on it's use/how it's used
+    # 'name': state name, string
+    # 'id': state id#, int. 0 is first alphabetically, 1 is 2nd, etc.
+    # 'points': point total for a state; all totals start at 0
+    # Lines from here on relate to questions
     
-    'snow': snowfall in inches per year, int. States at or above 19 inches are 'snow' states. Round down for values in inches
-    'rural_urban': classification of state as rural or urban, string.
-    'income_tax': yes/no on state having income tax, string (yes/no)
-    'rain': rainfall in inches per year, int. We consider approximately top 50% of rainfalls high rain, and bottom 50% low rain. Use >=42 inches for high rain. Round down for values in inches
-    'coastline': yes/no on state having a coastline
-    'avg_income': avg income in state, int. States above 70K are high, below 70K are low. Round as such: 78533 becomes 78500
-    'political_climate': liberal/conservative per state, string (liberal/conservative)
-    'university': indicates if state has an acclaimed university, string. If the state has an acclaimed (top 25) university, enter school name. Else, enter 'none'. In cases where a state has more than one top 25, list highest ranking
-    'mountains': yes/no on if state has many mountains, string (yes/no)
-    'desert': yes/no on if state is a desert environment, string (yes/no)
-    'population: state population, int. Top 20 are high population, bottom 30 are low. Wisconsin is 20th place at 5.895 million, use this as cutoff. Round as such: 5895908 becomes 5895000
-    'waterfront': yes/no on if state is either adjacent to a great lake or has one of the 10 longest rivers running through it, string (yes/no)
+    # 'snow': snowfall in inches per year, int. States at or above 19 inches are 'snow' states. Round down for values in inches
+    # 'rural_urban': classification of state as rural or urban, string.
+    # 'income_tax': yes/no on state having income tax, string (yes/no)
+    # 'rain': rainfall in inches per year, int. We consider approximately top 50% of rainfalls high rain, and bottom 50% low rain. Use >=42 inches for high rain. Round down for values in inches
+    # 'coastline': yes/no on state having a coastline
+    # 'avg_income': avg income in state, int. States above 70K are high, below 70K are low. Round as such: 78533 becomes 78500
+    # 'political_climate': liberal/conservative per state, string (liberal/conservative)
+    # 'university': indicates if state has an acclaimed university, string. If the state has an acclaimed (top 25) university, enter school name. Else, enter 'none'. In cases where a state has more than one top 25, list highest ranking
+    # 'mountains': yes/no on if state has many mountains, string (yes/no)
+    # 'desert': yes/no on if state is a desert environment, string (yes/no)
+    # 'population: state population, int. Top 20 are high population, bottom 30 are low. Wisconsin is 20th place at 5.895 million, use this as cutoff. Round as such: 5895908 becomes 5895000
+    # 'waterfront': yes/no on if state is either adjacent to a great lake or has one of the 10 longest rivers running through it, string (yes/no)
 
-    'home_price': median home price for the state, int. States above 210K are high, states below 210K are low. Round as such: 321934 becomes 321000
-    'crime_rate': crime rate ranking compared to other states, int. 1 means lowest crime, 50 means most crime, ie 5 means 5th safest state. 20 lowest crime rates are considered low crime.
+    # 'home_price': median home price for the state, int. States above 210K are high, states below 210K are low. Round as such: 321934 becomes 321000
+    # 'crime_rate': crime rate ranking compared to other states, int. 1 means lowest crime, 50 means most crime, ie 5 means 5th safest state. 20 lowest crime rates are considered low crime.
 
-    '''
     states = [
     
         {
@@ -55,7 +51,7 @@ class StateData:
             'university': 'none',
             'mountains': 'no',
             'desert': 'no',
-            'population': 5039877
+            'population': 5039877,
             'waterfront': 'yes',
             'home_price': 138000,
             'crime_rate': 37
@@ -74,7 +70,7 @@ class StateData:
             'university': 'none',
             'mountains': 'yes',
             'desert': 'no',
-            'population': 732673
+            'population': 732673,
             'waterfront': 'yes',
             'home_price': 300000,
             'crime_rate': 50
@@ -93,7 +89,7 @@ class StateData:
             'university': 'none',
             'mountains': 'yes',
             'desert': 'yes',
-            'population': 7276316
+            'population': 7276316,
             'waterfront': 'yes',
             'home_price': 62000,
             'crime_rate': 46
@@ -112,7 +108,7 @@ class StateData:
             'university': 'none',
             'mountains': 'no',
             'desert': 'no',
-            'population': 3025891
+            'population': 3025891,
             'waterfront': 'yes',
             'home_price': 128000,
             'crime_rate': 47
@@ -131,7 +127,7 @@ class StateData:
             'university': 'stanford university',
             'mountains': 'no',
             'desert': 'yes',
-            'population': 39237836
+            'population': 39237836,
             'waterfront': 'yes',
             'home_price': 555000,
             'crime_rate': 35
@@ -150,7 +146,7 @@ class StateData:
             'university': 'none',
             'mountains': 'yes',
             'desert': 'no',
-            'population': 5812069
+            'population': 5812069,
             'waterfront': 'yes',
             'home_price': 398000,
             'crime_rate': 31
@@ -169,7 +165,7 @@ class StateData:
             'university': 'yale university',
             'mountains': 'no',
             'desert': 'no',
-            'population': 3605597
+            'population': 3605597,
             'waterfront': 'no',
             'home_price': 255000,
             'crime_rate': 4
@@ -188,7 +184,7 @@ class StateData:
             'university': 'none',
             'mountains': 'no',
             'desert': 'no',
-            'population': 1003384
+            'population': 1003384,
             'waterfront': 'no',
             'home_price': 254000,
             'crime_rate': 34
@@ -207,7 +203,7 @@ class StateData:
             'university': 'none',
             'mountains': 'no',
             'desert': 'no',
-            'population': 21781128
+            'population': 21781128,
             'waterfront': 'no',
             'home_price': 245000,
             'crime_rate': 26
@@ -226,7 +222,7 @@ class StateData:
             'university': 'emory university',
             'mountains': 'no',
             'desert': 'no',
-            'population': 10799566
+            'population': 10799566,
             'waterfront': 'no',
             'home_price': 201000,
             'crime_rate': 29
@@ -245,7 +241,7 @@ class StateData:
             'university': 'none',
             'mountains': 'yes',
             'desert': 'no',
-            'population': 1441553
+            'population': 1441553,
             'waterfront': 'yes',
             'home_price': 636000,
             'crime_rate': 10
@@ -264,7 +260,7 @@ class StateData:
             'university': 'none',
             'mountains': 'yes',
             'desert': 'no',
-            'population': 1900923
+            'population': 1900923,
             'waterfront': 'yes',
             'home_price': 286000,
             'crime_rate': 9
@@ -283,7 +279,7 @@ class StateData:
             'university': 'university of chicago',
             'mountains': 'no',
             'desert': 'no',
-            'population': 12671469
+            'population': 12671469,
             'waterfront': 'yes',
             'home_price': 202000,
             'crime_rate': 33
@@ -302,7 +298,7 @@ class StateData:
             'university': 'university of notre dame',
             'mountains': 'no',
             'desert': 'no',
-            'population': 6805985	
+            'population': 6805985,	
             'waterfront': 'yes',
             'home_price': 155000,
             'crime_rate': 24
@@ -321,7 +317,7 @@ class StateData:
             'university': 'none',
             'mountains': 'no',
             'desert': 'no',
-            'population': 3193079
+            'population': 3193079,
             'waterfront': 'yes',
             'home_price': 152000,
             'crime_rate': 17
@@ -340,7 +336,7 @@ class StateData:
             'university': 'none',
             'mountains': 'no',
             'desert': 'no',
-            'population': 2934582
+            'population': 2934582,
             'waterfront': 'yes',
             'home_price': 150000,
             'crime_rate': 47
@@ -359,7 +355,7 @@ class StateData:
             'university': 'none',
             'mountains': 'no',
             'desert': 'no',
-            'population': 4509394
+            'population': 4509394,
             'waterfront': 'yes',
             'home_price': 146000,
             'crime_rate': 11
@@ -378,7 +374,7 @@ class StateData:
             'university': 'none',
             'mountains': 'no',
             'desert': 'no',
-            'population': 4624047
+            'population': 4624047,
             'waterfront': 'yes',
             'home_price': 166000,
             'crime_rate': 45
@@ -397,7 +393,7 @@ class StateData:
             'university': 'none',
             'mountains': 'no',
             'desert': 'no',
-            'population': 1372247
+            'population': 1372247,
             'waterfront': 'no',
             'home_price': 242000,
             'crime_rate': 1
@@ -416,7 +412,7 @@ class StateData:
             'university': 'johns hopkins university',
             'mountains': 'no',
             'desert': 'no',
-            'population': 6165129
+            'population': 6165129,
             'waterfront': 'no',
             'home_price': 308000,
             'crime_rate': 28
@@ -435,7 +431,7 @@ class StateData:
             'university': 'massachusetts institute of technology',
             'mountains': 'no',
             'desert': 'no',
-            'population': 6984723
+            'population': 6984723,
             'waterfront': 'no',
             'home_price': 422000,
             'crime_rate': 18
@@ -454,7 +450,7 @@ class StateData:
             'university': 'university of michigan ann arbor',
             'mountains': 'no',
             'desert': 'no',
-            'population': 10050811
+            'population': 10050811,
             'waterfront': 'no',
             'home_price': 173000,
             'crime_rate': 41
@@ -473,7 +469,7 @@ class StateData:
             'university': 'none',
             'mountains': 'no',
             'desert': 'no',
-            'population': 5707390
+            'population': 5707390,
             'waterfront': 'yes',
             'home_price': 256000,
             'crime_rate': 13
@@ -492,7 +488,7 @@ class StateData:
             'university': 'none',
             'mountains': 'no',
             'desert': 'no',
-            'population': 2949965
+            'population': 2949965,
             'waterfront': 'yes',
             'home_price': 126000,
             'crime_rate': 14
@@ -511,7 +507,7 @@ class StateData:
             'university': 'washington university in st. louis',
             'mountains': 'no',
             'desert': 'no',
-            'population': 6168187
+            'population': 6168187,
             'waterfront': 'yes',
             'home_price': 162000,
             'crime_rate': 44
@@ -532,7 +528,7 @@ class StateData:
             'university': 'none',
             'mountains': 'yes',
             'desert': 'no',
-            'population': 1104000
+            'population': 1104000,
             'waterfront': 'yes',
             'home_price': 277000,
             'crime_rate': 40
@@ -993,6 +989,4 @@ class StateData:
             'home_price': 250000,
             'crime_rate': 8
         },
-
->>>>>>> master
     ]
