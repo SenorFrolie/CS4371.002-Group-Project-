@@ -1,6 +1,14 @@
 <html>
     <head></head>
     <body>
-        <h1>TESTING THE PAGE</h1>
+        <h1>the page of suggestions</h1>
+        {{point}}
+        {% if point %}
+            {% endif %}
+            {% if comments %}
+                {%  for i in range(50) %}
+                    <p>"{{point[i]}}"</p>
+                {%  endfor %}
+            {% endif %}
     </body>
 </html>
