@@ -58,35 +58,41 @@ def suggest_page():
 
     drop_down_form = flask.request.form
     snow = drop_down_form["snow_answer"]
-    rural = drop_down_form["snow_answer"]
-    tax = drop_down_form["snow_answer"]
-    rain = drop_down_form["snow_answer"]
-    coast = drop_down_form["snow_answer"]
-    income = drop_down_form["snow_answer"]
-    political = drop_down_form["snow_answer"]
-    university = drop_down_form["snow_answer"]
-    mountains = drop_down_form["snow_answer"]
-    desert = drop_down_form["snow_answer"]
-    population = drop_down_form["snow_answer"]
-    waterfront = drop_down_form["snow_answer"]
-    home = drop_down_form["snow_answer"]
-    crime = drop_down_form["snow_answer"]
+    rural = drop_down_form["rural_answer"]
+    tax = drop_down_form["tax_answer"]
+    rain = drop_down_form["rain_answer"]
+    coast = drop_down_form["coast_answer"]
+    tax = drop_down_form["tax_answer"]
+    political = drop_down_form["political_answer"]
+    university = drop_down_form["uni_answer"]
+    mountain = drop_down_form["mountain_answer"]
+    desert = drop_down_form["desert_answer"]
+    population = drop_down_form["pop_answer"]
+    waterfront = drop_down_form["water_answer"]
+    home = drop_down_form["home_answer"]
+    crime = drop_down_form["crime_answer"]
 
-    #         'snow': 2,
-    #         'rural_urban': 'rural',
-    #         'income_tax': 'yes',
-    #         'rain': 56,
-    #         'coastline': 'yes',
-    #         'avg_income': 51700,
-    #         'political_climate': 'conservative',
-    #         'university': 'none',
-    #         'mountains': 'no',
-    #         'desert': 'no',
-    #         'population': 5039877,
-    #         'waterfront': 'yes',
-    #         'home_price': 138000,
-    #         'crime_rate': 37
+    points = []
+    for i in range(50):
+        points[i] = 0
+
+    state_obj = StateData
+    count = 0
+    for i in state_obj.states:
+        if snow == 'yes':
+            if state_obj.states[count]['snow_anser'] == 'yes':
+                points[count] += 1
+        elif snow == 'no':
+            if state_obj.states[count]['snow_anser'] == 'no':
+                points[count] += 1
+        if rural == 'yes':
+            if state_obj.states[count]['rural_anser'] == 'yes':
+                points[count] += 1
+        elif rural == 'no':
+            if state_obj.states[count]['rural_anser'] == 'no':
+                points[count] += 1
     
+    print(points)
 
     return flask.render_template("suggest_page.html")
 
