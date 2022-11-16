@@ -6,11 +6,8 @@ this is the file that has all our city data in it
 class StateData:
     """
     this is the class that will contain all our data form our states
-<<<<<<< HEAD
     """
-
-#======
-    # '''
+    
     # '''
     # Template:
     # Each category with an explanation on it's use/how it's used
@@ -18,7 +15,7 @@ class StateData:
     # 'id': state id#, int. 0 is first alphabetically, 1 is 2nd, etc.
     # 'points': point total for a state; all totals start at 0
     # Lines from here on relate to questions
-    
+
     # 'snow': snowfall in inches per year, int. States at or above 19 inches are 'snow' states. Round down for values in inches
     # 'rural_urban': classification of state as rural or urban, string.
     # 'income_tax': yes/no on state having income tax, string (yes/no)
@@ -34,6 +31,7 @@ class StateData:
 
     # 'home_price': median home price for the state, int. States above 210K are high, states below 210K are low. Round as such: 321934 becomes 321000
     # 'crime_rate': crime rate ranking compared to other states, int. 1 means lowest crime, 50 means most crime, ie 5 means 5th safest state. 20 lowest crime rates are considered low crime.
+    # '''
 
     states = [
     

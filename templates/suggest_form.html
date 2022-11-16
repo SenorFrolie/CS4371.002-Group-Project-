@@ -7,71 +7,89 @@
     <body>
         <h2>get a suggestion!</h2>
 
-        <p>do you want to live somewhere with snow?</p>
-        <form id="snow_answer" class="suggest_form" action="/suggest_page" method="POST">
+        <form class="suggest_form" action="/suggest_page" method="POST">
+            <p>do you want to live somewhere with snow?</p>
             <select name="snow_answer" id="snow_answer">
+                <option data-count="1" value="19">yes</option>
+                <option data-count="2" value="18">no</option>
+            </select>
+            <br>
+            <p>do you want to live in a rural area?</p>
+            <select name="rural_answer" id="rural_answer">
+                <option data-count="1" value="rural">rural</option>
+                <option data-count="2" value="urban">urban</option>
+            </select>
+            <br>
+            <p>do you care about state income tax?</p>
+            <select name="tax_answer" id="tax_answer">
                 <option data-count="1" value="yes">yes</option>
                 <option data-count="2" value="no">no</option>
             </select>
             <br>
             <p>do you want to live somewhere with lots of rainfall?</p>
             <select name="rain_answer" id="rain_answer">
-                <option data-count="1" value="yes">yes</option>
-                <option data-count="2" value="no">no</option>
-            </select>
-            <br>
-            <p>do you want to live in a rural area?</p>
-            <select name="rain_answer" id="rain_answer">
-                <option data-count="1" value="rural">rural</option>
-                <option data-count="2" value="urban">urban</option>
-            </select>
-            <br>
-            <p>do you care about state income tax?</p>
-            <select name="rain_answer" id="rain_answer">
-                <option data-count="1" value="yes">yes</option>
-                <option data-count="2" value="no">no</option>
+                <option data-count="1" value="42">yes</option>
+                <option data-count="2" value="41">no</option>
             </select>
             <br>
             <p>is a coastline important to you?</p>
-            <select name="rain_answer" id="rain_answer">
+            <select name="coast_answer" id="coast_answer">
                 <option data-count="1" value="yes">yes</option>
                 <option data-count="2" value="no">no</option>
             </select>
             <br>
             <p>do you want a state with high or low income?</p>
-            <select name="rain_answer" id="rain_answer">
-                <option data-count="1" value="yes">yes</option>
-                <option data-count="2" value="no">no</option>
+            <select name="coast_answer" id="coast_answer">
+                <option data-count="1" value="70000">yes</option>
+                <option data-count="2" value="69999">no</option>
+            </select>
+            <br>
+            <p>do you want a state with liberal or conservative climate?</p>
+            <select name="water_answer" id="water_answer">
+                <option data-count="1" value="liberal">liberal</option>
+                <option data-count="2" value="conservative">conservative</option>
             </select>
             <br>
             <p>do you want a state with an acclaimed university?</p>
-            <select name="rain_answer" id="rain_answer">
+            <select name="uni_answer" id="uni_answer">
                 <option data-count="1" value="yes">yes</option>
-                <option data-count="2" value="no">no</option>
+                <option data-count="2" value="none">no</option>
             </select>
             <br>
             <p>do you want a state with mountains?</p>
-            <select name="rain_answer" id="rain_answer">
+            <select name="mountain_answer" id="mountain_answer">
                 <option data-count="1" value="yes">yes</option>
                 <option data-count="2" value="no">no</option>
             </select>
             <br>
             <p>are you okay with a desert?</p>
-            <select name="rain_answer" id="rain_answer">
+            <select name="desert_answer" id="desert_answer">
                 <option data-count="1" value="yes">yes</option>
                 <option data-count="2" value="no">no</option>
             </select>
             <br>
             <p>do you want a state with a high or low population?</p>
-            <select name="rain_answer" id="rain_answer">
+            <select name="pop_answer" id="pop_answer">
+                <option data-count="1" value="5895000">yes</option>
+                <option data-count="2" value="5000000">no</option>
+            </select>
+            <br>
+            <p>do you want a state with big rivers/lakes?</p>
+            <select name="water_answer" id="water_answer">
                 <option data-count="1" value="yes">yes</option>
                 <option data-count="2" value="no">no</option>
             </select>
             <br>
-            <p>do you want a state with big rivers/lakes?</p>
-            <select name="rain_answer" id="rain_answer">
-                <option data-count="1" value="yes">yes</option>
-                <option data-count="2" value="no">no</option>
+            <p>do you care if your state has a high avg home price?</p>
+            <select name="water_answer" id="water_answer">
+                <option data-count="1" value="210,000">yes</option>
+                <option data-count="2" value="209,999">no</option>
+            </select>
+            <br>
+            <p>do you care if your state has a high avg crime rate?</p>
+            <select name="water_answer" id="water_answer">
+                <option data-count="1" value="20">yes</option>
+                <option data-count="2" value="21">no</option>
             </select>
             <br>
             <br>

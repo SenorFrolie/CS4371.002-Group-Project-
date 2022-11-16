@@ -56,13 +56,17 @@ def suggest_page():
     this is the page that will show the users suggestions and prompt them if they want to do it again
     """
 
-    snow_answer = request.form.get("snow_answer")
     drop_down_form = flask.request.form
     snow_answer = drop_down_form["snow_answer"]
     rain_answer = drop_down_form["rain_answer"]
-    for i in range(50):
-        if snow_answer == drop_down_form["snow answer"]:
-            print("hoopla")
+    rural_answer = drop_down_form["rain_answer"]
+    tax_answer = drop_down_form["rain_answer"]
+    coast_answer = drop_down_form["rain_answer"]
+    uni_answer = drop_down_form["rain_answer"]
+    mountain_answer = drop_down_form["rain_answer"]
+    desert_answer = drop_down_form["rain_answer"]
+    pop_answer = drop_down_form["rain_answer"]
+    water_answer = drop_down_form["rain_answer"]
 
     if snow_answer == "yes" and rain_answer == "no":
         return flask.render_template("suggest_page.html")
