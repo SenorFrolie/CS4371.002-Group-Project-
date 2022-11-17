@@ -2,15 +2,7 @@
     <head></head>
     <body>
         <h1>the page of suggestions</h1>
-        {{point}}
         <br>
-        {{final}}
-        {% if point %}
-            {% endif %}
-            {% if comments %}
-                {%  for i in range(50) %}
-                    <p>"{{point[i]}}"</p>
-                {%  endfor %}
-            {% endif %}
+        <h2>states we think you may like: {{final[0]}}, {{final[1]}}, {{final[2]}}</h2>
     </body>
 </html>
