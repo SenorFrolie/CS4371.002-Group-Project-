@@ -5,7 +5,7 @@
         <link rel="stylesheet" href={{ url_for('static', filename='front_page.css') }} />
         <script src="{{url_for('static', filename='front_page.js')}}"></script>
     </head>
-    <header>
+    <header class="header_container front_page_header">
         <title>My/State</title>
         <nav>
             <ul class="nav_links">
@@ -39,7 +39,7 @@
                             <picture class="premade_cell_layout"> 
                                 <img src="static/Images/suggestion_Icon.png" aria-hidden="true">
                             </picture>
-                            <h4 class="premade_pack Title_Cell_1"> Get a suggestion</h4>
+                            <h4 class="premade_pack Title_Cell"> Get a suggestion</h4>
                         </a>
                 </div>
             
@@ -53,21 +53,16 @@
                         <picture class="premade_cell_layout"> 
                             <img src="static/Images/city_scape_Icon.png" aria-hidden="true">
                         </picture>
-                        <h4 class="premade_pack Title_Cell_1"> Get Info on a city</h4>
+                        <h4 class="premade_pack Title_Cell"> Get Info on a city</h4>
                     </a>
                 </div>
 
                 <div class="pre_built_cell dashboard_container">
-                    <!--this takes the user to the dashboard
-                    <form action="/dashboard" method="POST" class="goto_suggestion">
-                        <input class="dashboard" type="submit" value="goto dashboard"/>
-                    </form>
-                    --> 
                     <a href="/dashboard" method="POST" class="goto_suggestion">
                         <picture class="premade_cell_layout"> 
                             <img src="static/Images/dashboard_Icon.png" aria-hidden="true">
                         </picture>
-                        <h4 class="premade_pack Title_Cell_1"> View Dashboard</h4>
+                        <h4 class="premade_pack Title_Cell"> View Dashboard</h4>
                     </a>
                 </div>
             

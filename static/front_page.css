@@ -23,7 +23,7 @@ align-items: center;
 color: #000000;
 }
 
-
+/*
 li,a {
     font-family: 'Libre Baskerville';
     font-weight: 500;
@@ -31,8 +31,8 @@ li,a {
     color:  rgb(40, 44, 47);
     text-decoration: none;
 }
-
-header{
+*/
+.front_page_header{
     width: 1400px;
     height: 80px;
     top: 10px;
@@ -62,6 +62,15 @@ p {
 /*aligning my title*/
 h1 {
     text-align: center;
+}
+
+h4{
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
 }
 
 
@@ -161,16 +170,20 @@ h1 {
     padding: 0.125rem 1.5rem;
 }
 
-.Title_Cell_1{
-    font-size: 1.5rem;
+.Title_Cell{
+    font-size: 1rem;
+    
     line-height: 1.38;
-    margin-bottom: 0.5rem;
+    padding: 10;
+    margin-top: 18;
     color: rgb(40, 44, 47);
+    vertical-align: baseline;
 }
 
 .goto_suggestion{
+
     text-align: center;
-    display: flex;
+    flex-shrink: 0;
 }
 
 
@@ -218,12 +231,17 @@ color: white;
 
 }
 
-div, img{
+div, img,h4, li, a,body ,header{
     margin: 0px;
     padding: 0px;
     border: 0px;
     font: inherit;
     vertical-align: baseline;
+}
+
+a{
+    color:inherit;
+    text-decoration: none;
 }
 
 .first_container{
