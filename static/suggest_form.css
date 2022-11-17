@@ -1,12 +1,61 @@
+*{
+    box-sizing: border-box;
+    border: #FFFFFF;
+}
+
+body,header,div, a, h1,h2,title{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font: inherit;
+    vertical-align: baseline;
+}
+
 body {
     font-family: Helvetica;
     color: rgb(255, 255, 255);
-    background-color: rgb(27, 26, 26);
-    background-image: linear-gradient(rgb(42, 95, 106),rgb(30, 27, 74));
+    background-color: rgb(199, 206, 173);
+    background-image: rgb(178, 187, 145);
     font-size: 12;
     text-align: left;
     padding: auto;
 }
+
+
+title{
+    position: absolute;
+    width: 123px;
+    height: 95px;
+    left: 658px;
+    top: 0px;
+    
+    font-family: 'Libre Bodoni';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 45px;
+    /* identical to box height */
+    
+    display: flex;
+    align-items: center;
+    
+    color: #000000;
+    }
+    
+
+a{
+    color:inherit;
+    text-decoration: none;
+}
+
+h2{
+padding: 10;
+text-align: center;
+font-size: 30;
+margin:auto;
+
+}
+
 
 /*aligning all my plain text*/
 p {
@@ -17,6 +66,20 @@ p {
 h1 {
     text-align: center;
 }
+
+.suggestion_form_header{
+    width: 1400px;
+    height: 80px;
+    top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    background: rgb(178, 187, 145);
+    align-items: center;
+    padding: 30px 10%;
+    margin: 0 auto;
+}
+
+
 
 /*styleling my image inad aligning it*/
 .image {
@@ -31,4 +94,22 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+}
+
+
+
+.nav_links{
+    list-style: none;
+    
+}
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a {
+transition: all 0.3s ease 0s;
+}
+.nav_links li a:hover {
+color: white;
 }

@@ -1,13 +1,25 @@
 <html>
   <head>
-    <link rel="stylesheet" href={{ url_for('static', filename='suggest.css') }}
+    <link rel="stylesheet" href={{ url_for('static', filename='suggest_form.css') }}
     />
     <script src="{{url_for('static', filename='front_page.js')}}"></script>
   </head>
 
+
+  <header class="suggestion_form_header">
+      <title>My/State</title>
+    <div>
+      <nav>
+          <ul class="nav_links">
+              <li><a href="#">About</a></li>
+              <li><a href="#"> Login </a></li>
+          </ul>
+      </nav>
+    </div>
+  </header>
+
   <body>
     <h2>get a suggestion!</h2>
-
     <form class="suggest_form" action="/suggest_page" method="POST">
       <p>do you want to live somewhere with snow?</p>
       <select name="snow_answer" id="snow_answer">
