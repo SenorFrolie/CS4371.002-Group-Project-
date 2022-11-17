@@ -10,6 +10,7 @@
         <nav>
             <ul class="nav_links">
                 <li><a href="#">About</a></li>
+                <li><a href="#"> Login </a></li>
             </ul>
         </nav>
         <form action="/suggest_form" method="POST" class="goto_suggestion">
@@ -18,21 +19,63 @@
     </header>
     <body>
 
-        <h1>hello! what would you like to do?</h1>
-    
-        <!--this takes the user to the page to get a suggested state-->
-        <form action="/suggest_form" method="POST" class="goto_suggestion">
-            <input class="suggestion" type="submit" value="get a suggestion"/>
-        </form>
+        <h1 class="Main_Header">You know your taste, We know the science. Let's work together.</h1>
+        <h2 class="sub_header">Find the right state for you</h2>
 
-        <!--this takes the user to the city page input form-->
-        <form action="/city_form" method="POST" class="goto_suggestion">
-            <input class="info_over_city" type="submit" value="get info over city"/>
-        </form>
-        
-        <!--this takes the user to the dashboard-->
-        <form action="/dashboard" method="POST" class="goto_suggestion">
-            <input type="submit" value="goto dashboard"/>
-        </form>
+        <div class="first_container">
+
+            <div class="inner_container">
+
+                <div class="pre_built_cell goto_suggestion">
+                        <!--this takes the user to the page to get a suggested state
+                    <form action="/suggest_form" method="POST" class="goto_suggestion">
+                        <picture class="group_header_list"> 
+                            <img src="static/Images/suggestion_Icon.png">
+                            <input class="suggestion" type="submit" value="get a suggestion"/>
+                        </picture>
+                    </form>
+                        -->
+                        <a href="/suggest_form" method="POST" class="goto_suggestion">
+                            <picture class="premade_cell_layout"> 
+                                <img src="static/Images/suggestion_Icon.png" aria-hidden="true">
+                            </picture>
+                            <h4 class="premade_pack Title_Cell_1"> Get a suggestion</h4>
+                        </a>
+                </div>
+            
+                <div class="pre_built_cell city_form_container">
+                    <!--this takes the user to the city page input form
+                    <form action="/city_form" method="POST" class="goto_suggestion">
+                        <input class="info_over_city" type="submit" value="get info over city"/>
+                    </form>
+                    -->
+                    <a href="/city_form" method="POST" class="goto_suggestion">
+                        <picture class="premade_cell_layout"> 
+                            <img src="static/Images/city_scape_Icon.png" aria-hidden="true">
+                        </picture>
+                        <h4 class="premade_pack Title_Cell_1"> Get Info on a city</h4>
+                    </a>
+                </div>
+
+                <div class="pre_built_cell dashboard_container">
+                    <!--this takes the user to the dashboard
+                    <form action="/dashboard" method="POST" class="goto_suggestion">
+                        <input class="dashboard" type="submit" value="goto dashboard"/>
+                    </form>
+                    --> 
+                    <a href="/dashboard" method="POST" class="goto_suggestion">
+                        <picture class="premade_cell_layout"> 
+                            <img src="static/Images/dashboard_Icon.png" aria-hidden="true">
+                        </picture>
+                        <h4 class="premade_pack Title_Cell_1"> View Dashboard</h4>
+                    </a>
+                </div>
+            
+            </div>
+        </div>
+
+
+    
+
     </body>
 </html>

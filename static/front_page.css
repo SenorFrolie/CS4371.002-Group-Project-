@@ -38,7 +38,7 @@ header{
     top: 10px;
     display: flex;
     justify-content: flex-end;
-    background: #52888B;
+    background: rgb(178, 187, 145);
     align-items: center;
     padding: 30px 10%;
     margin: 0 auto;
@@ -75,6 +75,38 @@ h1 {
 
 }
 
+.Main_header{
+    
+    padding: 10;
+    color: rgb(40, 44, 47);
+    font-family: Lora, Georgia, serif;
+    font-size: 3rem;
+    font-weight: 350;
+    letter-spacing: -0.73px;
+    line-height: 3.5rem;
+    max-width: 31.875rem;
+    margin: 0px auto 0.75rem;
+    margin-top: 50px;
+    margin-bottom: 1rem;
+}
+
+.sub_header{
+    width: 170px;
+    height: 20px;
+    left: 597px;
+    top: 311px;
+    
+
+    color: rgb(40, 44, 47);
+    font-family: Lora, Georgia, serif;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: -0.73px;
+    max-width: 19.5rem;
+    margin: 0px auto 0.75rem;
+    margin-bottom: 10px;
+}
+
 .suggestion_Quiz{
     background: rgb(40, 44, 47);
     border-radius: 6.25rem;
@@ -89,15 +121,16 @@ h1 {
     border: none;
     cursor: pointer;
     color: #FFFFFF;
-    transition: all 0.3s ease 0s;
+    transition: color 0.4s ease 0s, background-color 0.4s ease 0s, border 0.4s ease 0s, width 0.4s cubic-bezier(0.09, 1, 0.205, 1) 0s;
     align-items: center;
+    display: inline-block;
 }
 
 .suggestion_Quiz:hover{
-    color: #0088a9;
+    color:  rgb(199, 206, 173);
 }
 
-.suggestion, .info_over_city{
+.suggestion, .info_over_city, .dashboard{
     background: rgb(40, 44, 47);
     border-radius: 6.25rem;
 
@@ -116,22 +149,35 @@ h1 {
 }
 
 .suggestion:hover{
-    color: #0088a9;
+    color: rgb(199, 206, 173);
+}
+
+
+.pre_built_cell{
+    width: 16rem;
+    flex-shrink: 0;
+    text-align: center;
+    margin: 0;
+    padding: 0.125rem 1.5rem;
+}
+
+.Title_Cell_1{
+    font-size: 1.5rem;
+    line-height: 1.38;
+    margin-bottom: 0.5rem;
+    color: rgb(40, 44, 47);
+}
+
+.goto_suggestion{
+    text-align: center;
+    display: flex;
 }
 
 
 .info_over_city:hover{
-    color: #0088a9;
+    color:  rgb(199, 206, 173);
 }
 
-.surbuban_living{
-    width: 1441px;
-    height: 611px;
-    left: -1px;
-    top: 67px;
-
-    background: url(Old_Suburban_living.png);
-}
 
 
 .nav_links{
@@ -149,7 +195,6 @@ transition: all 0.3s ease 0s;
 .nav_links li a:hover {
 color: white;
 }
-    
 .cta button{
     width: 120px;
     height: 30px;
@@ -171,6 +216,32 @@ color: white;
     align-items: center;
     color: #FFFFFF;
 
+}
+
+div, img{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+.first_container{
+    background-color: rgb(251, 245, 240);
+    padding: 3.75rem 0px;   
+}
+
+.inner_container{
+    display: flex;
+    gap: 1rem;
+    padding: 0.125rem 1.5rem;
+    min-width: min-content;
+    justify-content: center;
+}
+
+.premade_cell_layout img{
+    width: 100;
+    margin-bottom: -20;
 }
 
 button:hover{
