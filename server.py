@@ -177,13 +177,13 @@ def suggest_page():
 
     if top_states:
         top_three_states = []
-        for i in range(3):
+        for i in top_states:
             rando = random.choice(top_states)
             top_states.remove(rando)
             top_three_states.append(rando)
         return flask.render_template(
-        "suggest_page.html", point=points, final=top_three_states
-    )
+            "suggest_page.html", point=points, final=top_three_states
+        )
     else:
         for i in range(10):
             top_states.append(state_obj.states[i]["name"])
@@ -193,16 +193,14 @@ def suggest_page():
                 top_states.remove(rando)
                 top_three_states.append(rando)
         return flask.render_template(
-        "suggest_page.html", point=points, final=top_three_states
-    )
+            "suggest_page.html", point=points, final=top_three_states
+        )
 
-    return flask.render_template(
-        "suggest_page.html", point=points, final=top_three_states
-    )
 
 @app.route("/sorry", methods=["POST", "GET"])
 def sorry():
-    return flask.render_template('sorry.html')
+    return flask.render_template("sorry.html")
+
 
 @app.route("/dashboard", methods=["POST", "GET"])
 def dashboard():
