@@ -4,45 +4,127 @@
 }
 
 title{
-position: absolute;
 width: 123px;
 height: 95px;
 left: 658px;
 top: 0px;
-
 font-family: 'Libre Bodoni';
 font-style: normal;
 font-weight: 400;
 font-size: 36px;
 line-height: 45px;
-/* identical to box height */
+padding: 5;
 
-display: flex;
+display:flex;
 align-items: center;
+
 
 color: #000000;
 }
 
-/*
+
+
 li,a {
     font-family: 'Libre Baskerville';
-    font-weight: 500;
-    font-size: 20px;
     color:  rgb(40, 44, 47);
     text-decoration: none;
+
 }
-*/
+li{
+    text-decoration:none;
+    display: inline;
+}
+
+/* what the user sees */
 .front_page_header{
-    width: 1400px;
-    height: 80px;
-    top: 10px;
+    position: sticky;
     display: flex;
-    justify-content: flex-end;
+    height: 5rem;
+    width: 100%;
+    z-index: 800;
+    margin-bottom: -5rem;
     background: rgb(178, 187, 145);
     align-items: center;
-    padding: 30px 10%;
+    padding: 0px 75px;
     margin: 0 auto;
+    
 }
+
+/* what is holding the object in place */
+.header_inner_container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    max-width: 160rem;
+    padding: 0px 0.75px;
+    margin: auto;
+    align-items: center;
+}
+
+.left_inner_container{
+    height: 100%;
+    width:45%;
+    align-items: center;
+}
+
+.left_nav_links{
+    margin-top: 2rem;
+    list-style: none;
+    font-size: 1.25rem;
+    float: left;
+    
+}
+
+.left_nav_links, li{
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+.left_nav_links, li, a{
+    transition: all 0.3s ease 0s;
+}
+
+.left_nav_links li a:hover{
+    color: white;
+}
+
+
+.center_inner_container{
+    width:10%
+}
+
+
+.right_inner_container{
+    height: 100%;
+    width:45%;
+    align-items: center;
+}
+
+.right_nav_links{
+    margin-top: 2rem;
+    list-style: none;
+    font-size: 1.25rem;
+    float: right;
+    
+}
+
+.right_nav_links, li{
+    display: inline-block;
+    padding: 0px 10px;
+    
+}
+
+.right_nav_links, li, a{
+    transition: all 0.3s ease 0s;
+}
+
+
+.right_nav_links li a:hover{
+    color: white;
+}
+
+
+
 
 body {
     font-family: Helvetica;
@@ -52,6 +134,8 @@ body {
     font-size: 12;
     text-align: left;
     padding: auto;
+    
+
 }
 
 /*aligning all my plain text*/
@@ -116,12 +200,11 @@ h4{
     margin-bottom: 10px;
 }
 
-.suggestion_Quiz{
+.suggestion_Quiz button{
     background: rgb(40, 44, 47);
     border-radius: 6.25rem;
-
     margin-left: 20px ;
-    margin-top: 10px;
+    margin-top: 1.5px;
     font-family: 'Libre Bodoni';
     font-style: normal;
     font-weight: 400;
@@ -161,7 +244,17 @@ h4{
     color: rgb(199, 206, 173);
 }
 
+.mystate{
+    width: 6.75rem;
+    height:7rem;
+    object-fit: contain;
+}
 
+.mystate img{
+    width: 100%;
+    height: auto;
+
+}
 .pre_built_cell{
     width: 16rem;
     flex-shrink: 0;
@@ -197,10 +290,7 @@ h4{
     list-style: none;
     
 }
-.nav_links li{
-    display: inline-block;
-    padding: 0px 20px;
-}
+
 
 .nav_links li a {
 transition: all 0.3s ease 0s;
@@ -208,30 +298,9 @@ transition: all 0.3s ease 0s;
 .nav_links li a:hover {
 color: white;
 }
-.cta button{
-    width: 120px;
-    height: 30px;
-    left: 1400px;
-    top: 19px;
 
-    background: rgb(40, 44, 47);
-    border-radius: 6.25rem;
 
-    margin-left: 20px ;
-    font-family: 'Libre Bodoni';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 15px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-    align-items: center;
-    color: #FFFFFF;
-
-}
-
-div, img,h4, li, a,body ,header{
+div, img,h4,body ,header{
     margin: 0px;
     padding: 0px;
     border: 0px;
@@ -260,8 +329,4 @@ a{
 .premade_cell_layout img{
     width: 100;
     margin-bottom: -20;
-}
-
-button:hover{
-    color: #0088a9;
 }
