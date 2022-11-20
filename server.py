@@ -68,6 +68,7 @@ def init_app():
     """
     making sure user is logged out just in case of cookies
     """
+
     logout_user()
 
 
