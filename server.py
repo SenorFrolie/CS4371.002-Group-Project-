@@ -6,8 +6,70 @@ from flask import request
 import random
 from city_data import CityInfo
 from state_data import StateData
+import os
+import flask
+from dotenv import load_dotenv
+from flask_sqlalchemy import SQLAlchemy
+from flask_login import (
+    UserMixin,
+    LoginManager,
+    login_user,
+    login_required,
+    logout_user,
+    current_user,
+)
 
+load_dotenv()
+
+# app config stuff
 app = flask.Flask(__name__)
+app.secret_key = "secret"
+app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
+db = SQLAlchemy(app)
+app.config["TESTING"] = False
+
+# login config stuff
+login_manager = LoginManager()
+login_manager.init_app(app)
+login_manager.login_view = "login_form"
+
+
+class Person(UserMixin, db.Model):
+    """
+    this is the model of my users database
+    """
+
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(80), unique=True, nullable=False)
+    password = db.Column(db.String(80), unique=True, nullable=False)
+
+    def __repr__(self):
+        """
+        idk just good to have
+        """
+        return "<User %r>" % self.username
+
+
+with app.app_context():
+    db.create_all()
+
+
+@login_manager.user_loader
+def load_user(user_id):
+    """
+    returns the object of the user id turned in
+    """
+
+    return Person.query.get(int(user_id))
+
+
+@app.before_first_request
+def init_app():
+    """
+    making sure user is logged out just in case of cookies
+    """
+
+    logout_user()
 
 
 @app.route("/")
@@ -177,13 +239,13 @@ def suggest_page():
 
     if top_states:
         top_three_states = []
-        for i in range(3):
+        for i in top_states:
             rando = random.choice(top_states)
             top_states.remove(rando)
             top_three_states.append(rando)
         return flask.render_template(
-        "suggest_page.html", point=points, final=top_three_states
-    )
+            "suggest_page.html", point=points, final=top_three_states
+        )
     else:
         for i in range(10):
             top_states.append(state_obj.states[i]["name"])
@@ -193,16 +255,14 @@ def suggest_page():
                 top_states.remove(rando)
                 top_three_states.append(rando)
         return flask.render_template(
-        "suggest_page.html", point=points, final=top_three_states
-    )
+            "suggest_page.html", point=points, final=top_three_states
+        )
 
-    return flask.render_template(
-        "suggest_page.html", point=points, final=top_three_states
-    )
 
 @app.route("/sorry", methods=["POST", "GET"])
 def sorry():
-    return flask.render_template('sorry.html')
+    return flask.render_template("sorry.html")
+
 
 @app.route("/dashboard", methods=["POST", "GET"])
 def dashboard():
