@@ -273,5 +273,14 @@ def dashboard():
     return flask.render_template("dashboard.html")
 
 
+@app.route("/about", methods=["POST", "GET"])
+def about():
+    """
+    this is the page that has all the about us information
+    """
+
+    return flask.render_template("about.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True)
