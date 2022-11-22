@@ -261,6 +261,10 @@ def suggest_page():
 
 @app.route("/sorry", methods=["POST", "GET"])
 def sorry():
+    """
+    this is if the list is empty page
+    """
+
     return flask.render_template("sorry.html")
 
 
