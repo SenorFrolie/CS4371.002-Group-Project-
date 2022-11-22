@@ -1,8 +1,20 @@
 <html>
-    <head></head>
-    <body>
-        <h1>the page of suggestions</h1>
-        <br>
-        <h2>states we think you may like: {{final[0]}}, {{final[1]}}, {{final[2]}}</h2>
-    </body>
+  <head>
+    <link rel="stylesheet" href={{ url_for('static',
+    filename='suggest_page.css') }} />
+  </head>
+  <body>
+    <br />
+    <h2>
+        {% if final %}
+            <h2>states we think you may like</h2>
+            {%  for i in final %}
+                <h3>"{{i}}"</h3>
+            {%  endfor %}
+        {% endif %}
+        {% if not final %}
+            <h3>it looks like there are no states that match your preferences, try the quiz again</h3>
+        {% endif %}
+    </h2>
+  </body>
 </html>

@@ -236,27 +236,27 @@ def suggest_page():
 
     if not top_states:
         return flask.redirect(flask.url_for("sorry"))
+    elif len(top_states) < 3:
+        top_three_states = []
+        for i in range(3):
+            rando = random.choice(state_obj.states[i]["name"])
+            top_three_states.append(rando)
 
-    if top_states:
+        return flask.render_template(
+            "suggest_page.html", point=points, final=top_three_states
+        )
+    elif top_states:
         top_three_states = []
         for i in top_states:
             rando = random.choice(top_states)
             top_states.remove(rando)
             top_three_states.append(rando)
+
         return flask.render_template(
             "suggest_page.html", point=points, final=top_three_states
         )
-    else:
-        for i in range(10):
-            top_states.append(state_obj.states[i]["name"])
-            top_three_states = []
-            for i in range(3):
-                rando = random.choice(top_states)
-                top_states.remove(rando)
-                top_three_states.append(rando)
-        return flask.render_template(
-            "suggest_page.html", point=points, final=top_three_states
-        )
+
+    return flask.render_template("sorry.html")
 
 
 @app.route("/sorry", methods=["POST", "GET"])
