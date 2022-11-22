@@ -1,3 +1,4 @@
+
 <html>
   <head>
     <link rel="stylesheet" href={{ url_for('static', filename='suggest_form.css') }}
@@ -5,108 +6,197 @@
     <script src="{{url_for('static', filename='front_page.js')}}"></script>
   </head>
 
+  <header class="header_container suggestion_header">
+    <div class ="header_inner_container">
+        <div class="left_inner_container">
+            <ui class="left_nav_links">
+                <!--Addtional contant can added here for the future-->
+                <li ><a href="/Login"> Login </a></li>
+                <li ><a href="/feature"> feature </a></li>
+            </ui>
+        </div>
 
-  <header class="suggestion_form_header">
-      <title>My/State</title>
-    <div>
-      <nav>
-          <ul class="nav_links">
-              <li><a href="#">About</a></li>
-              <li><a href="#"> Login </a></li>
-          </ul>
-      </nav>
-    </div>
-  </header>
+        <div class="center_inner_container">
+            <!--add home url here-->
+            <a href="/#"> <title> My/State</title></a> 
+        </div>
+
+        <div class="right_inner_container">
+            <ul class="right_nav_links">
+                <!--Addtional contant can added here for the future-->
+                <li><a href="/suggest_form" method="POST" class="suggestion_Quiz"><button>Take Quiz</button></a></li>
+            </ul>
+        </div>
+</header>
 
   <body>
     <h2>get a suggestion!</h2>
+
+
     <form class="suggest_form" action="/suggest_page" method="POST">
-      <p>do you want to live somewhere with snow?</p>
-      <select name="snow_answer" id="snow_answer">
-        <option data-count="1" value="19">yes</option>
-        <option data-count="2" value="18">no</option>
-      </select>
+      <div class="body_question_container">
+          <div class="q_snow">
+              <p class="question_being_ask">do you want to live somewhere with snow?</p>
+              <div class="answer_button">
+                <select name="snow_answer" id="snow_answer" class="answer_button">
+                    <option data-count="1" value="19">yes</option>
+                    <option data-count="2" value="18">no</option>
+                </select>
+                <br />
+              </div>
+          </div>
+
+          <div class="q_rural">
+            <p class="question_being_ask">do you want to live in a rural area?</p>
+              <div class="answer_button">
+                <select name="rural_answer" id="rural_answer" class="answer_button">
+                  <option data-count="1" value="rural">rural</option>
+                  <option data-count="2" value="urban">urban</option>
+                </select>
+                <br />
+            </div>
+          </div>
+          
+          <div class="q_income_tax">
+            <p class="question_being_ask">do you care about state income tax?</p>
+              <div class="answer_button">
+                <select name="tax_answer" id="tax_answer" class="answer_button">
+                  <option data-count="1" value="yes">yes</option>
+                  <option data-count="2" value="no">no</option>
+                </select>
+                <br />
+              </div>
+          </div>
+        
+          <div class="q_rainfall">
+            <p class="question_being_ask">do you want to live somewhere with lots of rainfall?</p>
+              <div class="answer_button">
+                  <select name="rain_answer" id="rain_answer" class="answer_button">
+                    <option data-count="1" value="42">yes</option>
+                    <option data-count="2" value="41">no</option>
+                  </select>
+                <br />
+              </div>
+          </div>
+        
+          <div class="q_coastline">
+            <p class="question_being_ask">is a coastline important to you?</p>
+            <div class="answer_button">
+              <select name="coast_answer" id="coast_answer" class="answer_button">
+                <option data-count="1" value="yes">yes</option>
+                <option data-count="2" value="no">no</option>
+              </select>
+            <br />
+            </div>
+          </div>
+        
+          <div class="q_high_or_low_income">
+            <p class="question_being_ask">do you want a state with high or low income?</p>
+              <div class="answer_button">
+                <select name="income_answer" id="income_answer" class="answer_button">
+                  <option data-count="1" value="high">high</option>
+                  <option data-count="2" value="low">low</option>
+                </select>
+                <br />
+              </div>
+          </div>
+        
+          <div class="q_lib_Conser_climate">
+            <p class="question_being_ask">do you want a state with liberal or conservative climate?</p>
+              <div class="answer_button">
+                <select name="political_answer" id="political_answer" class="answer_button">
+                  <option data-count="1" value="liberal">liberal</option>
+                  <option data-count="2" value="conservative">conservative</option>
+                </select>
+                <br />
+              </div>
+          </div>
+          
+          <div class="q_uni">
+            <p class="question_being_ask">do you want a state with an acclaimed university?</p>
+              <div class="answer_button">
+                <select name="uni_answer" id="uni_answer" class="answer_button">
+                  <option data-count="1" value="yes">yes</option>
+                  <option data-count="2" value="none">no</option>
+                </select>
+                <br />
+              </div>
+          </div>
+        
+          <div  class="q_mountains">
+            <p class="question_being_ask">do you want a state with mountains?</p>
+              <div class="answer_button">
+                <select name="mountain_answer" id="mountain_answer" class="answer_button">
+                  <option data-count="1" value="yes">yes</option>
+                  <option data-count="2" value="no">no</option>
+                </select>
+                <br />
+              </div>
+          </div>
+          
+
+          <div class="q_desert">
+            <p class="question_being_ask">are you okay with a desert?</p>
+              <div class="answer_button">
+                <select name="desert_answer" id="desert_answer" class="answer_button">
+                  <option data-count="1" value="yes">yes</option>
+                  <option data-count="2" value="no">no</option>
+                </select>
+                <br />
+              </div>
+          </div>
+        
+
+          <div class="q_high_or_low_pop">
+            <p class="question_being_ask">do you want a state with a high or low population?</p>
+              <div class="answer_button">
+                <select name="pop_answer" id="pop_answer" class="answer_button">
+                  <option data-count="1" value="high">high</option>
+                  <option data-count="2" value="low">low</option>
+                </select>
+                <br />
+              </div>
+          </div>
+        
+          <div class="q_big_river_lakes">
+            <p class="question_being_ask">do you want a state with big rivers/lakes?</p>
+              <div class="answer_button">
+                <select name="water_answer" id="water_answer" class="answer_button">
+                  <option data-count="1" value="yes">yes</option>
+                  <option data-count="2" value="no">no</option>
+                </select>
+                <br />
+              </div>
+          </div>
+          
+          <div class="q_high_avg_homeprice">
+            <p class="question_being_ask">do you care if your state has a high avg home price?</p>
+              <div class="answer_button">
+                <select name="home_answer" id="home_answer" class="answer_button">
+                  <option data-count="1" value="high">high</option>
+                  <option data-count="2" value="low">low</option>
+                </select>
+                <br />
+              </div>
+      </div>
+     
+      <div  class="q_high_crime_rates">
+          <p class="question_being_ask">do you care if your state has a high avg crime rate?</p>
+          <div class="answer_button">
+            <select name="crime_answer" id="crime_answer" class="button">
+              <option data-count="1" value="yes">yes</option>
+              <option data-count="2" value="no">no</option>
+            </select>
+          <br />
+          </div>
+      </div>
+
       <br />
-      <p>do you want to live in a rural area?</p>
-      <select name="rural_answer" id="rural_answer">
-        <option data-count="1" value="rural">rural</option>
-        <option data-count="2" value="urban">urban</option>
-      </select>
-      <br />
-      <p>do you care about state income tax?</p>
-      <select name="tax_answer" id="tax_answer">
-        <option data-count="1" value="yes">yes</option>
-        <option data-count="2" value="no">no</option>
-      </select>
-      <br />
-      <p>do you want to live somewhere with lots of rainfall?</p>
-      <select name="rain_answer" id="rain_answer">
-        <option data-count="1" value="42">yes</option>
-        <option data-count="2" value="41">no</option>
-      </select>
-      <br />
-      <p>is a coastline important to you?</p>
-      <select name="coast_answer" id="coast_answer">
-        <option data-count="1" value="yes">yes</option>
-        <option data-count="2" value="no">no</option>
-      </select>
-      <br />
-      <p>do you want a state with high or low income?</p>
-      <select name="income_answer" id="income_answer">
-        <option data-count="1" value="high">high</option>
-        <option data-count="2" value="low">low</option>
-      </select>
-      <br />
-      <p>do you want a state with liberal or conservative climate?</p>
-      <select name="political_answer" id="political_answer">
-        <option data-count="1" value="liberal">liberal</option>
-        <option data-count="2" value="conservative">conservative</option>
-      </select>
-      <br />
-      <p>do you want a state with an acclaimed university?</p>
-      <select name="uni_answer" id="uni_answer">
-        <option data-count="1" value="yes">yes</option>
-        <option data-count="2" value="none">no</option>
-      </select>
-      <br />
-      <p>do you want a state with mountains?</p>
-      <select name="mountain_answer" id="mountain_answer">
-        <option data-count="1" value="yes">yes</option>
-        <option data-count="2" value="no">no</option>
-      </select>
-      <br />
-      <p>are you okay with a desert?</p>
-      <select name="desert_answer" id="desert_answer">
-        <option data-count="1" value="yes">yes</option>
-        <option data-count="2" value="no">no</option>
-      </select>
-      <br />
-      <p>do you want a state with a high or low population?</p>
-      <select name="pop_answer" id="pop_answer">
-        <option data-count="1" value="high">high</option>
-        <option data-count="2" value="low">low</option>
-      </select>
-      <br />
-      <p>do you want a state with big rivers/lakes?</p>
-      <select name="water_answer" id="water_answer">
-        <option data-count="1" value="yes">yes</option>
-        <option data-count="2" value="no">no</option>
-      </select>
-      <br />
-      <p>do you care if your state has a high avg home price?</p>
-      <select name="home_answer" id="home_answer">
-        <option data-count="1" value="high">high</option>
-        <option data-count="2" value="low">low</option>
-      </select>
-      <br />
-      <p>do you care if your state has a high avg crime rate?</p>
-      <select name="crime_answer" id="crime_answer">
-        <option data-count="1" value="yes">yes</option>
-        <option data-count="2" value="no">no</option>
-      </select>
-      <br />
-      <br />
+    </div>
+
+    <div>
       <input type="submit" />
+    </div>
     </form>
   </body>
 </html>

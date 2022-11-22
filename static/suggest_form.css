@@ -3,12 +3,17 @@
     border: #FFFFFF;
 }
 
-body,header,div, a, h1,h2,title{
+body,header,div, h1,h2{
     margin: 0px;
     padding: 0px;
     border: 0px;
     font: inherit;
     vertical-align: baseline;
+}
+
+a{
+    color:inherit;
+    text-decoration: none;
 }
 
 body {
@@ -23,30 +28,36 @@ body {
 
 
 title{
-    position: absolute;
     width: 123px;
     height: 95px;
     left: 658px;
     top: 0px;
-    
     font-family: 'Libre Bodoni';
     font-style: normal;
     font-weight: 400;
     font-size: 36px;
     line-height: 45px;
-    /* identical to box height */
+    padding-right: 5;
+    padding-left: 5;
     
-    display: flex;
+    display:flex;
     align-items: center;
+    
     
     color: #000000;
     }
-    
 
-a{
-    color:inherit;
+li,a {
+    font-family: 'Libre Baskerville';
+    color:  rgb(40, 44, 47);
     text-decoration: none;
+
 }
+li{
+    text-decoration:none;
+    display: inline;
+}
+
 
 h2{
 padding: 10;
@@ -67,35 +78,116 @@ h1 {
     text-align: center;
 }
 
-.suggestion_form_header{
-    width: 1400px;
-    height: 80px;
-    top: 10px;
+
+/* Header */
+.suggestion_header{
+    position: sticky;
     display: flex;
-    justify-content: flex-end;
+    height: 5rem;
+    width: 100%;
+    z-index: 800;
+    margin-bottom: -5rem;
     background: rgb(178, 187, 145);
     align-items: center;
-    padding: 30px 10%;
+    padding: 0px 75px;
     margin: 0 auto;
 }
 
 
-
-/*styleling my image inad aligning it*/
-.image {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+.header_inner_container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    max-width: 160rem;
+    padding: 0px 0.75px;
+    margin: auto;
+    align-items: center;
 }
 
-.button_group {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+.left_inner_container{
+    height: 100%;
+    width:45%;
+    align-items: center;
 }
 
+.left_nav_links{
+    margin-top: 2rem;
+    list-style: none;
+    font-size: 1.25rem;
+    float: left;   
+}
+
+.left_nav_links, li{
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+.left_nav_links, li, a{
+    transition: all 0.3s ease 0s;
+}
+
+.left_nav_links li a:hover{
+    color: white;
+}
+
+
+.center_inner_container{
+    width:13%;
+    padding-left: 5;
+    padding-right: 5;
+}
+
+
+    
+
+
+.right_inner_container{
+    height: 100%;
+    width:45%;
+    align-items: center;
+}
+
+.right_nav_links{
+    margin-top: 2rem;
+    list-style: none;
+    font-size: 1.25rem;
+    float: right;
+    
+}
+
+.right_nav_links, li{
+    display: inline-block;
+    padding: 0px 10px;
+    
+}
+
+.right_nav_links, li, a{
+    transition: all 0.3s ease 0s;
+}
+
+
+.right_nav_links li a:hover{
+    color: white;
+}
+
+
+.suggestion_Quiz button{
+    background: rgb(40, 44, 47);
+    border-radius: 6.25rem;
+    margin-left: 20px ;
+    margin-top: 1.5px;
+    font-family: 'Libre Bodoni';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    border: none;
+    cursor: pointer;
+    color: #FFFFFF;
+    transition: color 0.4s ease 0s, background-color 0.4s ease 0s, border 0.4s ease 0s, width 0.4s cubic-bezier(0.09, 1, 0.205, 1) 0s;
+    align-items: center;
+    display: inline-block;
+}
 
 
 .nav_links{
@@ -112,4 +204,56 @@ transition: all 0.3s ease 0s;
 }
 .nav_links li a:hover {
 color: white;
+}
+
+
+
+/* Questions */
+
+.question_being_ask{
+    font-family: Lora, Georgia, serif;
+    color: rgb(40, 44, 47);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+select{
+    text-align: center;
+    appearance: none;
+    background-color: rgb(228, 231, 214);
+    border: none;
+    margin: 0;
+    width: 69;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+    z-index: 1;
+          
+
+    &::-ms-expand {
+      display: none;
+    }
+
+}
+
+.answer_button{
+    cursor: pointer;
+    text-align: center;
+    list-style: none;
+}
+
+
+
+.q_snow, .q_rural, .q_income_tax,
+.q_rainfall, .q_coastline, .q_high_or_low_income,
+.q_lib_Conser_climate, .q_uni, .q_mountains, .q_desert,
+.q_high_or_low_pop, .q_big_river_lakes, .q_high_avg_homeprice,
+.q_high_crime_rates{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    border-color:rgb(40, 44, 47);;
+    border-style: double;
+
 }
