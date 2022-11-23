@@ -288,6 +288,13 @@ def about():
 
     return flask.render_template("about.html")
 
+@app.route("/Login", methods=["POST", "GET"])
+def Login():
+    """
+    this is the page that has all the about us information
+    """
+
+    return flask.render_template("login.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
