@@ -239,8 +239,8 @@ def suggest_page():
     elif len(top_states) < 3:
         top_three_states = []
         for i in range(3):
-            rando = random.choice(state_obj.states[i]["name"])
-            top_three_states.append(rando)
+            #rando = random.choice(state_obj.states[i]["name"])
+            top_three_states.append(state_obj.states[i]["name"])
 
         return flask.render_template(
             "suggest_page.html", point=points, final=top_three_states
