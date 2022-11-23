@@ -1,7 +1,8 @@
 # CS4371.002-Group-Project-
 
 
-
+## app link
+* (https://my-state.fly.dev "link to our app")
 
 Credit Section:
 Suggestion Icon Image: <a href="https://www.flaticon.com/free-icons/suggestion" title="suggestion icons">Suggestion icons created by Freepik - Flaticon</a>
