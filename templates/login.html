@@ -34,18 +34,23 @@
 
 <body>
 
-    <form class="suggest_form" action="/dashboard" method="POST">
-        <div class="body_question_container">
-            <div class="q_snow">
-                <p class="question_being_ask">login</p>
-                <div class="answer_button">
-                  <input type="text" name="username" id="username" placeholder="username" class="answer_button">
-                  <input type="text" name="password" id="password" placeholder="password" class="answer_button">
-                  <input type="submit" value="login" class="answer_button">
-                  <br />
-                </div>
+    <div class="container">
+        <div class="forms_container">
+            <div class="signin-signup">
+                <form action="#" class="sign-in-form" method="POST">
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" name="username" id="username" placeholder="username"     >
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" name="password" id="password" placeholder="password" >
+                    </div>
+                    <input type="submit" name="submit"  id="submit" class="btn solid" value="Login">
+                    </form>
             </div>
-    </form>
-    
+        </div>
+        <div class="panal_container"></div>    
+    </div>
 </body>
 </html>
