@@ -305,5 +305,13 @@ def info():
 
     return flask.render_template("info.html")
 
+@app.route("/city_info", methods=["POST", "GET"])
+def city_info():
+    """
+    this is the page that has the info about cities
+    """
+
+    return flask.render_template("city_info.html")
+
 if __name__ == "__main__":
     app.run(debug=True)

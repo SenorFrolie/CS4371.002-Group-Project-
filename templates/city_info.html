@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href={{ url_for('static', filename='info.css')
+    }} />
+</head>
+
+<header class="header_container front_page_header">
+    <div class ="header_inner_container">
+        <div class="left_inner_container">
+            <ui class="left_nav_links">
+                <!--Addtional contant can added here for the future-->
+                <li ><a href="/Login"> Login </a></li>
+                <li ><a href="/about"> feature </a></li>
+            </ui>
+        </div>
+
+        <div class="center_inner_container">
+            <!--add home url here-->
+            <a href="/#"> <title> My/State</title></a> 
+        </div>
+
+        <div class="right_inner_container">
+            <ul class="right_nav_links">
+                <!--Addtional contant can added here for the future-->
+                <li><a href="/suggest_form" method="POST" class="suggestion_Quiz"><button>Take Quiz</button></a></li>
+            </ul>
+        </div>
+  </header>
+  
+<body>
+    <h3>Austin</h3>
+    <p>Austin is the capitol of Texas</p>
+    <p>Austin is a beautiful city in central texas in a area called the hill country</p>
+    <p>Austin is filled with many pretty hills, rivers, and lakes</p>
+</body>
+</html>

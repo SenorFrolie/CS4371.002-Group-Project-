@@ -1,0 +1,345 @@
+body {
+    font-family: Helvetica;
+    color: rgb(255, 255, 255);
+    background-color: rgb(199, 206, 173);
+    background-image: rgb(178, 187, 145);
+    font-size: 12;
+    text-align: left;
+    text-align: center;
+    padding: auto;
+}
+
+/* body {
+    font-family: Helvetica;
+    color: rgb(255, 255, 255);
+    background-color: rgb(199, 206, 173);
+    background-image: rgb(178, 187, 145);
+    font-size: 12;
+    text-align: left;
+    padding: auto;
+    
+
+} */
+
+*{
+    box-sizing: border-box;
+    border: #FFFFFF;
+}
+
+title{
+width: 123px;
+height: 95px;
+left: 658px;
+top: 0px;
+font-family: 'Libre Bodoni';
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+line-height: 45px;
+padding-right: 5;
+padding-left: 5;
+
+display:flex;
+align-items: center;
+
+
+color: #000000;
+}
+
+
+
+li,a {
+    font-family: 'Libre Baskerville';
+    color:  rgb(40, 44, 47);
+    text-decoration: none;
+
+}
+li{
+    text-decoration:none;
+    display: inline;
+}
+
+/* what the user sees */
+.front_page_header{
+    position: sticky;
+    display: flex;
+    height: 5rem;
+    width: 100%;
+    z-index: 800;
+    margin-bottom: -5rem;
+    background: rgb(178, 187, 145);
+    align-items: center;
+    padding: 0px 75px;
+    margin: 0 auto;
+    
+}
+
+/* what is holding the object in place */
+.header_inner_container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    max-width: 160rem;
+    padding: 0px 0.75px;
+    margin: auto;
+    align-items: center;
+}
+
+.left_inner_container{
+    height: 100%;
+    width:45%;
+    align-items: center;
+}
+
+.left_nav_links{
+    margin-top: 2rem;
+    list-style: none;
+    font-size: 1.25rem;
+    float: left;
+    
+}
+
+.left_nav_links, li{
+    display: inline-block;
+    padding: 0px 10px;
+}
+
+.left_nav_links, li, a{
+    transition: all 0.3s ease 0s;
+}
+
+.left_nav_links li a:hover{
+    color: white;
+}
+
+
+.center_inner_container{
+    width:13%;
+    padding-left: 5;
+    padding-right: 5;
+}
+
+
+.right_inner_container{
+    height: 100%;
+    width:45%;
+    align-items: center;
+}
+
+.right_nav_links{
+    margin-top: 2rem;
+    list-style: none;
+    font-size: 1.25rem;
+    float: right;
+    
+}
+
+.right_nav_links, li{
+    display: inline-block;
+    padding: 0px 10px;
+    
+}
+
+.right_nav_links, li, a{
+    transition: all 0.3s ease 0s;
+}
+
+
+.right_nav_links li a:hover{
+    color: white;
+}
+
+
+/*aligning all my plain text*/
+p {
+    text-align: center;
+}
+
+/*aligning my title*/
+h1 {
+    text-align: center;
+}
+
+h4{
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+
+.header_logo{
+    justify-content: flex-end;
+    align-items: center;
+    object-fit: contain;
+    display: flex;
+    margin-right: auto;
+
+
+}
+
+.Main_header{
+    
+    padding: 10;
+    color: rgb(40, 44, 47);
+    font-family: Lora, Georgia, serif;
+    font-size: 3rem;
+    font-weight: 350;
+    letter-spacing: -0.73px;
+    line-height: 3.5rem;
+    max-width: 31.875rem;
+    margin: 0px auto 0.75rem;
+    margin-top: 50px;
+    margin-bottom: 1rem;
+}
+
+.sub_header{
+    width: 170px;
+    height: 20px;
+    left: 597px;
+    top: 311px;
+    
+
+    color: rgb(40, 44, 47);
+    font-family: Lora, Georgia, serif;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: -0.73px;
+    max-width: 19.5rem;
+    margin: 0px auto 0.75rem;
+    margin-bottom: 10px;
+}
+
+.suggestion_Quiz button{
+    background: rgb(40, 44, 47);
+    border-radius: 6.25rem;
+    margin-left: 20px ;
+    margin-top: 1.5px;
+    font-family: 'Libre Bodoni';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    border: none;
+    cursor: pointer;
+    color: #FFFFFF;
+    transition: color 0.4s ease 0s, background-color 0.4s ease 0s, border 0.4s ease 0s, width 0.4s cubic-bezier(0.09, 1, 0.205, 1) 0s;
+    align-items: center;
+    display: inline-block;
+}
+
+.suggestion_Quiz:hover{
+    color:  rgb(199, 206, 173);
+}
+
+.suggestion, .info_over_city, .dashboard{
+    background: rgb(40, 44, 47);
+    border-radius: 6.25rem;
+
+    margin-left: 20px ;
+    font-family: 'Libre Bodoni';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    color: #FFFFFF;
+    transition: all 0.3s ease 0s;
+
+}
+
+.suggestion:hover{
+    color: rgb(199, 206, 173);
+}
+
+.mystate{
+    width: 6.75rem;
+    height:7rem;
+    object-fit: contain;
+}
+
+.mystate img{
+    width: 100%;
+    height: auto;
+
+}
+.pre_built_cell{
+    width: 16rem;
+    flex-shrink: 0;
+    text-align: center;
+    margin: 0;
+    padding: 0.125rem 1.5rem;
+}
+
+.Title_Cell{
+    font-size: 1rem;
+    
+    line-height: 1.38;
+    padding-left:5;
+    padding-right: 5;
+    margin-top: 18;
+    color: rgb(40, 44, 47);
+    vertical-align: baseline;
+}
+
+.goto_suggestion{
+
+    text-align: center;
+    flex-shrink: 0;
+}
+
+
+.info_over_city:hover{
+    color:  rgb(199, 206, 173);
+}
+
+
+
+.nav_links{
+    list-style: none;
+    
+}
+
+
+.nav_links li a {
+transition: all 0.3s ease 0s;
+}
+.nav_links li a:hover {
+color: white;
+}
+
+
+div, img,h4,body ,header{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+a{
+    color:inherit;
+    text-decoration: none;
+}
+
+.first_container{
+    background-color: rgb(251, 245, 240);
+    padding: 3.75rem 0px;   
+}
+
+.inner_container{
+    display: flex;
+    gap: 1rem;
+    padding: 0.125rem 1.5rem;
+    min-width: min-content;
+    justify-content: center;
+}
+
+.premade_cell_layout img{
+    width: 100;
+    margin-bottom: -20;
+}
