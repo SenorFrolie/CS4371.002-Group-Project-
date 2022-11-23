@@ -3,6 +3,30 @@
     <link rel="stylesheet" href={{ url_for('static',
     filename='suggest_page.css') }} />
   </head>
+
+  <header class="header_container front_page_header">
+    <div class ="header_inner_container">
+        <div class="left_inner_container">
+            <ui class="left_nav_links">
+                <!--Addtional contant can added here for the future-->
+                <li ><a href="/Login"> Login </a></li>
+                <li ><a href="/about"> feature </a></li>
+            </ui>
+        </div>
+
+        <div class="center_inner_container">
+            <!--add home url here-->
+            <a href="/#"> <title> My/State</title></a> 
+        </div>
+
+        <div class="right_inner_container">
+            <ul class="right_nav_links">
+                <!--Addtional contant can added here for the future-->
+                <li><a href="/suggest_form" method="POST" class="suggestion_Quiz"><button>Take Quiz</button></a></li>
+            </ul>
+        </div>
+  </header>
+
   <body>
     <br />
     <h2>
