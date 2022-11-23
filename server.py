@@ -25,7 +25,7 @@ load_dotenv()
 app = flask.Flask(__name__)
 app.secret_key = "secret"
 app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
-#db = SQLAlchemy(app)
+# db = SQLAlchemy(app)
 app.config["TESTING"] = False
 
 # login config stuff
@@ -288,13 +288,22 @@ def about():
 
     return flask.render_template("about.html")
 
+
 @app.route("/Login", methods=["POST", "GET"])
 def Login():
     """
-    this is the page that has all the about us information
+    this is the login page
     """
 
     return flask.render_template("login.html")
+
+@app.route("/info", methods=["POST", "GET"])
+def info():
+    """
+    this is the page that has the info about states
+    """
+
+    return flask.render_template("info.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
