@@ -234,9 +234,9 @@ def suggest_page():
             top_states.append(state_obj.states[i]["name"])
             max_points -= 1
 
-    if not top_states:
-        return flask.redirect(flask.url_for("sorry"))
-    elif len(top_states) < 3:
+    # if not top_states:
+    #     return flask.redirect(flask.url_for("sorry"))
+    if len(top_states) < 3:
         states = []
         top_three_states = []
         for i in range(50):
@@ -244,6 +244,8 @@ def suggest_page():
         for i in range(3):
             rando = random.choice(states)
             top_three_states.append(rando)
+        for i, str in enumerate(top_three_states):
+            top_three_states[i] = str.capitalize()
 
         return flask.render_template(
             "suggest_page.html", point=points, final=top_three_states
@@ -254,6 +256,8 @@ def suggest_page():
             rando = random.choice(top_states)
             top_states.remove(rando)
             top_three_states.append(rando)
+        for i, str in enumerate(top_three_states):
+            top_three_states[i] = str.capitalize()
 
         return flask.render_template(
             "suggest_page.html", point=points, final=top_three_states
