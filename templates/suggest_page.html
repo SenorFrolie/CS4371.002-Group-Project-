@@ -10,7 +10,7 @@
             <ui class="left_nav_links">
                 <!--Addtional contant can added here for the future-->
                 <li ><a href="/Login"> Login </a></li>
-                <li ><a href="/about"> feature </a></li>
+                <li ><a href="/about"> About Us </a></li>
             </ui>
         </div>
 
@@ -31,13 +31,13 @@
     <br />
     <h2>
         {% if final %}
-            <h2>states we think you may like</h2>
+            <h2>Based on your answers, we think you might like these states: </h2>
             {%  for i in final %}
                 <h3>"{{i}}"</h3>
             {%  endfor %}
         {% endif %}
         {% if not final %}
-            <h3>it looks like there are no states that match your preferences, try the quiz again</h3>
+            <h3>It looks like we had a hard time making a suggestion based on your answers, please try taking the quiz again.</h3>
         {% endif %}
     </h2>
   </body>
