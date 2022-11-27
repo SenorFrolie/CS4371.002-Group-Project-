@@ -138,6 +138,8 @@ def suggest_page():
     points = []
     for i in range(50):
         points.append(0)
+    
+    null_points = 0
 
     state_obj = StateData
     count = 0
@@ -148,84 +150,112 @@ def suggest_page():
         elif snow == "18":
             if state_obj.states[count]["snow"] <= 18:
                 points[count] += 1
+        elif snow == "null":
+            null_points += 1
         if rural == "rural":
             if state_obj.states[count]["rural_urban"] == "rural":
                 points[count] += 1
         elif rural == "urban":
             if state_obj.states[count]["rural_urban"] == "urban":
                 points[count] += 1
+        elif rural == "null":
+            null_points += 1
         if tax == "yes":
             if state_obj.states[count]["income_tax"] == "yes":
                 points[count] += 1
         elif tax == "no":
             if state_obj.states[count]["income_tax"] == "no":
                 points[count] += 1
+        elif tax == "null":
+            null_points += 1
         if rain == "42":
             if state_obj.states[count]["rain"] >= 42:
                 points[count] += 1
         elif rain == "41":
             if state_obj.states[count]["rain"] <= 41:
                 points[count] += 1
+        elif rain == "null":
+            null_points += 1
         if coast == "yes":
             if state_obj.states[count]["coastline"] == "yes":
                 points[count] += 1
         elif coast == "no":
             if state_obj.states[count]["coastline"] == "no":
                 points[count] += 1
+        elif coast == "null":
+            null_points += 1
         if income == "high":
             if state_obj.states[count]["avg_income"] >= 70000:
                 points[count] += 1
         elif income == "low":
             if state_obj.states[count]["avg_income"] <= 69999:
                 points[count] += 1
+        elif income == "null":
+            null_points += 1
         if political == "liberal":
             if state_obj.states[count]["political_climate"] == "liberal":
                 points[count] += 1
         elif political == "conservative":
             if state_obj.states[count]["political_climate"] == "conservative":
                 points[count] += 1
+        elif political == "null":
+            null_points += 1
         if university == "yes":
             if state_obj.states[count]["university"] != "none":
                 points[count] += 1
         elif university == "no":
             if state_obj.states[count]["university"] == "none":
                 points[count] += 1
+        elif university == "null":
+            null_points += 1
         if mountain == "yes":
             if state_obj.states[count]["mountains"] == "yes":
                 points[count] += 1
         elif mountain == "no":
             if state_obj.states[count]["mountains"] == "no":
                 points[count] += 1
+        elif mountain == "null":
+            null_points += 1
         if desert == "yes":
             if state_obj.states[count]["desert"] == "yes":
                 points[count] += 1
         elif desert == "no":
             if state_obj.states[count]["desert"] == "no":
                 points[count] += 1
+        elif desert == "null":
+            null_points += 1
         if population == "high":
             if state_obj.states[count]["population"] >= 5895000:
                 points[count] += 1
         elif population == "low":
             if state_obj.states[count]["population"] <= 5894999:
                 points[count] += 1
+        elif population == "null":
+            null_points += 1
         if waterfront == "yes":
             if state_obj.states[count]["waterfront"] == "yes":
                 points[count] += 1
         elif waterfront == "no":
             if state_obj.states[count]["waterfront"] == "no":
                 points[count] += 1
+        elif waterfront == "null":
+            null_points += 1
         if home == "high":
             if state_obj.states[count]["home_price"] >= 210000:
                 points[count] += 1
         elif home == "low":
             if state_obj.states[count]["home_price"] <= 209999:
                 points[count] += 1
+        elif home == "null":
+            null_points += 1
         if crime == "yes":
             if state_obj.states[count]["crime_rate"] <= 20:
                 points[count] += 1
         elif crime == "no":
             if state_obj.states[count]["crime_rate"] >= 21:
                 points[count] += 1
+        elif crime == "null":
+            null_points += 1
 
     top_states = []
     max_points = max(points)
@@ -234,9 +264,9 @@ def suggest_page():
             top_states.append(state_obj.states[i]["name"])
             max_points -= 1
 
-    # if not top_states:
-    #     return flask.redirect(flask.url_for("sorry"))
-    if len(top_states) < 3:
+    if null_points >= 15:
+        return flask.redirect(flask.url_for("sorry"))
+    elif len(top_states) < 3:
         states = []
         top_three_states = []
         for i in range(50):
