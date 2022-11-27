@@ -11,13 +11,14 @@ top: 0px;
 font-family: 'Libre Bodoni';
 font-style: normal;
 font-weight: 400;
-font-size: 36px;
+font-size: 54;
 line-height: 45px;
 padding-right: 5;
-padding-left: 5;
+padding-left: 3rem;
 
 display:flex;
 align-items: center;
+
 
 
 color: #000000;
@@ -71,7 +72,7 @@ li{
 .left_nav_links{
     margin-top: 2rem;
     list-style: none;
-    font-size: 1.25rem;
+    font-size: 2rem;
     float: left;
     
 }
@@ -113,7 +114,7 @@ li{
 
 .right_nav_links, li{
     display: inline-block;
-    padding: 0px 10px;
+    padding: 0px 40px;
     
 }
 
@@ -181,9 +182,10 @@ h4{
     letter-spacing: -0.73px;
     line-height: 3.5rem;
     max-width: 31.875rem;
-    margin: 0px auto 0.75rem;
+    margin: 0px auto 0.45rem;
     margin-top: 50px;
     margin-bottom: 1rem;
+
 }
 
 .sub_header{
@@ -211,7 +213,7 @@ h4{
     font-family: 'Libre Bodoni';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 42px;
     line-height: 25px;
     border: none;
     cursor: pointer;
@@ -219,6 +221,7 @@ h4{
     transition: color 0.4s ease 0s, background-color 0.4s ease 0s, border 0.4s ease 0s, width 0.4s cubic-bezier(0.09, 1, 0.205, 1) 0s;
     align-items: center;
     display: inline-block;
+    padding: 0;
 }
 
 .suggestion_Quiz:hover{
@@ -333,4 +336,24 @@ a{
 .premade_cell_layout img{
     width: 100;
     margin-bottom: -20;
+}
+
+
+.front_and_center{
+    padding: 10rem;
+}
+
+
+.Take_Quiz{
+    text-align: center;
+    border-radius: 4rem;
+    margin: 25px auto -7.25rem;
+    width: 100%;
+
+}
+
+.Take_Quiz button{
+    height: 8%;
+    width: 100%;
+    max-width: 20%;
 }
