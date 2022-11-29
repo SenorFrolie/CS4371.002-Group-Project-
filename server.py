@@ -25,7 +25,7 @@ load_dotenv()
 app = flask.Flask(__name__)
 app.secret_key = "secret"
 app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
-# db = SQLAlchemy(app)
+db = SQLAlchemy(app)
 app.config["TESTING"] = False
 
 # login config stuff
@@ -34,24 +34,24 @@ login_manager.init_app(app)
 login_manager.login_view = "login_form"
 
 
-# class Person(UserMixin, db.Model):
-#     """
-#     this is the model of my users database
-#     """
+class Person(UserMixin, db.Model):
+    """
+    this is the model of my users database
+    """
 
-#     id = db.Column(db.Integer, primary_key=True)
-#     username = db.Column(db.String(80), unique=True, nullable=False)
-#     password = db.Column(db.String(80), unique=True, nullable=False)
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(80), unique=True, nullable=False)
+    password = db.Column(db.String(80), unique=True, nullable=False)
 
-#     def __repr__(self):
-#         """
-#         idk just good to have
-#         """
-#         return "<User %r>" % self.username
+    def __repr__(self):
+        """
+        idk just good to have
+        """
+        return "<User %r>" % self.username
 
 
-# with app.app_context():
-#     db.create_all()
+with app.app_context():
+    db.create_all()
 
 
 @login_manager.user_loader
@@ -138,7 +138,7 @@ def suggest_page():
     points = []
     for i in range(50):
         points.append(0)
-    
+
     null_points = 0
 
     state_obj = StateData
@@ -331,6 +331,7 @@ def Login():
 
     return flask.render_template("login.html")
 
+
 @app.route("/info", methods=["POST", "GET"])
 def info():
     """
@@ -339,6 +340,7 @@ def info():
 
     return flask.render_template("info.html")
 
+
 @app.route("/city_info", methods=["POST", "GET"])
 def city_info():
     """
@@ -346,6 +348,7 @@ def city_info():
     """
 
     return flask.render_template("city_info.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
