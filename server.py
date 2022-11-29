@@ -340,6 +340,7 @@ def texas_info():
 
     return flask.render_template("texas_info.html")
 
+
 @app.route("/california_info", methods=["POST", "GET"])
 def california_info():
     """
@@ -347,6 +348,7 @@ def california_info():
     """
 
     return flask.render_template("california_info.html")
+
 
 @app.route("/ny_info", methods=["POST", "GET"])
 def ny_info():
