@@ -1,10 +1,15 @@
-<html>
-  <head>
-    <link rel="stylesheet" href={{ url_for('static', filename='dashboard.css')
-    }} />
-  </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href={{ url_for('static', filename='info.css')
+            }} />
+</head>
 
-  <header class="header_container front_page_header">
+<header class="header_container front_page_header">
     <div class ="header_inner_container">
         <div class="left_inner_container">
             <ui class="left_nav_links">
@@ -16,7 +21,7 @@
 
         <div class="center_inner_container">
             <!--add home url here-->
-            <a href="/#"> <title> My/State</title></a> 
+            <a href="/#"> <title> My/State</title></a>
         </div>
 
         <div class="right_inner_container">
@@ -25,14 +30,12 @@
                 <li><a href="/suggest_form" method="POST" class="suggestion_Quiz"><button>Take Quiz</button></a></li>
             </ul>
         </div>
-  </header>
+</header>
 
-  <body>
-    <h1>Welcome back! "Insert Username"</h1>
-    <br>
-    <h4>Favorite States:</h4>
-    <li ><a href="/texas_info"> Texas </a></li>
-    <li ><a href="/california_info"> California </a></li>
-    <li ><a href="/ny_info"> New York </a></li>
-  </body>
+<body>
+<h3>California</h3>
+<p>
+    A large state that is very beautiful
+</p>
+</body>
 </html>

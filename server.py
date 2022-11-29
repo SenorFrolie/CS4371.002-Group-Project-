@@ -332,13 +332,29 @@ def Login():
     return flask.render_template("login.html")
 
 
-@app.route("/info", methods=["POST", "GET"])
-def info():
+@app.route("/texas_info", methods=["POST", "GET"])
+def texas_info():
     """
     this is the page that has the info about states
     """
 
-    return flask.render_template("info.html")
+    return flask.render_template("texas_info.html")
+
+@app.route("/california_info", methods=["POST", "GET"])
+def california_info():
+    """
+    this is the page that has the info about states
+    """
+
+    return flask.render_template("california_info.html")
+
+@app.route("/ny_info", methods=["POST", "GET"])
+def ny_info():
+    """
+    this is the page that has the info about states
+    """
+
+    return flask.render_template("ny_info.html")
 
 
 @app.route("/city_info", methods=["POST", "GET"])
