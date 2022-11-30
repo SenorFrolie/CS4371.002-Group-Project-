@@ -140,6 +140,7 @@ def suggest_page():
         points.append(0)
 
     null_points = 0
+    numbers_for_display = 0
 
     state_obj = StateData
     count = 0
@@ -278,19 +279,21 @@ def suggest_page():
             top_three_states[i] = str.capitalize()
 
         return flask.render_template(
-            "suggest_page.html", point=points, final=top_three_states
+            "suggest_page.html", point=points, final=top_three_states, nums=numbers_for_display
         )
     elif top_states:
         top_three_states = []
-        for i in top_states:
-            rando = random.choice(top_states)
-            top_states.remove(rando)
-            top_three_states.append(rando)
+        # for i in top_states:
+        #     rando = random.choice(top_states)
+        #     top_states.remove(rando)
+        #     top_three_states.append(rando)
+        for i in range(3):
+            top_three_states.append(top_states[i])
         for i, str in enumerate(top_three_states):
             top_three_states[i] = str.capitalize()
 
         return flask.render_template(
-            "suggest_page.html", point=points, final=top_three_states
+            "suggest_page.html", point=points, final=top_three_states, nums=numbers_for_display
         )
 
     return flask.render_template("sorry.html")
