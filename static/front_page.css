@@ -11,7 +11,7 @@ top: 0px;
 font-family: 'Libre Bodoni';
 font-style: normal;
 font-weight: 400;
-font-size: 54;
+font-size: 34;
 line-height: 45px;
 padding-right: 5;
 padding-left: 3rem;
@@ -66,14 +66,13 @@ li{
 .left_inner_container{
     height: 100%;
     width:45%;
-    align-items: center;
 }
 
 .left_nav_links{
     margin-top: 2rem;
     list-style: none;
-    font-size: 2rem;
-    float: left;
+    font-size: 1.5rem;
+    display: inline-block;
     
 }
 
@@ -93,8 +92,16 @@ li{
 
 .center_inner_container{
     width:13%;
-    padding-left: 5;
-    padding-right: 5;
+    padding-left: 1px;
+    padding-right: 3;
+    text-align: center;
+    display: inline-block;
+}
+
+.center_inner_container title{
+    display:flex;
+    padding-left:13;
+    text-align: left;
 }
 
 
@@ -355,5 +362,9 @@ a{
 .Take_Quiz button{
     height: 8%;
     width: 100%;
-    max-width: 20%;
+    max-width: 25%;
+}
+
+.Take_Quiz title{
+    font-size: 20rem;
 }

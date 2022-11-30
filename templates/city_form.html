@@ -27,9 +27,23 @@
       </header>
 
     <body>
-        <form action="/city_info" method="POST" class="city_form">
-            <input type="text" name="city_name" id="city name" placeholder="pick a city"/>
-            <input type="submit" value="submit"/>
-        </form>
+
+        <div class="forms_container">
+            <div class="signin-signup">
+                <form action="/city_info" method="POST" class="city_form">
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" name="city_name" id="city name" placeholder="pick a city"/>
+                    </div>
+
+                    <div>
+                        <input type="submit" value="submit" class="btn solid"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    
+
+
     </body>
 </html>
