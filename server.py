@@ -25,7 +25,7 @@ load_dotenv()
 app = flask.Flask(__name__)
 app.secret_key = "secret"
 app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
-db = SQLAlchemy(app)
+# db = SQLAlchemy(app)
 app.config["TESTING"] = False
 
 # login config stuff
@@ -34,33 +34,33 @@ login_manager.init_app(app)
 login_manager.login_view = "login_form"
 
 
-class Person(UserMixin, db.Model):
-    """
-    this is the model of my users database
-    """
+# class Person(UserMixin, db.Model):
+#     """
+#     this is the model of my users database
+#     """
 
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(80), unique=True, nullable=False)
-    password = db.Column(db.String(80), unique=True, nullable=False)
+#     id = db.Column(db.Integer, primary_key=True)
+#     username = db.Column(db.String(80), unique=True, nullable=False)
+#     password = db.Column(db.String(80), unique=True, nullable=False)
 
-    def __repr__(self):
-        """
-        idk just good to have
-        """
-        return "<User %r>" % self.username
-
-
-with app.app_context():
-    db.create_all()
+#     def __repr__(self):
+#         """
+#         idk just good to have
+#         """
+#         return "<User %r>" % self.username
 
 
-@login_manager.user_loader
-def load_user(user_id):
-    """
-    returns the object of the user id turned in
-    """
+# with app.app_context():
+#     db.create_all()
 
-    return Person.query.get(int(user_id))
+
+# @login_manager.user_loader
+# def load_user(user_id):
+#     """
+#     returns the object of the user id turned in
+#     """
+
+#     return Person.query.get(int(user_id))
 
 
 @app.before_first_request
@@ -279,7 +279,10 @@ def suggest_page():
             top_three_states[i] = str.capitalize()
 
         return flask.render_template(
-            "suggest_page.html", point=points, final=top_three_states, nums=numbers_for_display
+            "suggest_page.html",
+            point=points,
+            final=top_three_states,
+            nums=numbers_for_display,
         )
     elif top_states:
         top_three_states = []
@@ -293,7 +296,10 @@ def suggest_page():
             top_three_states[i] = str.capitalize()
 
         return flask.render_template(
-            "suggest_page.html", point=points, final=top_three_states, nums=numbers_for_display
+            "suggest_page.html",
+            point=points,
+            final=top_three_states,
+            nums=numbers_for_display,
         )
 
     return flask.render_template("sorry.html")
