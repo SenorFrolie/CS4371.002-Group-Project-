@@ -31,10 +31,21 @@
     <br />
     <h2>
         {% if final %}
-            <h2>Based on your answers, we think you might like these states: </h2>
-            {%  for i in final %}
-                <h3>"{{i}}"</h3>
+            <h1>Based on your answers, we think you might like these states: </h1>
+            <!-- {%  for i in final %}
+                <h2>State {{nums}}: {{i}}</h2>
+            {%  endfor %} -->
+            {%  for i in range(3) %}
+                <h2>State #{{i + 1}}: {{final[i]}}</h2>
             {%  endfor %}
+            <br>
+            <br>
+            <h2>Our methodology</h2>
+            <h4>
+                Our methodology for the quiz is based of of a points system
+                If a state matches your preferences then the state recieves a point
+                The top three states that matched your points preferences are displayed below in order
+            </h4>
         {% endif %}
         {% if not final %}
             <h3>It looks like we had a hard time making a suggestion based on your answers, please try taking the quiz again.</h3>
