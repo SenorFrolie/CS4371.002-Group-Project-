@@ -54,22 +54,22 @@ login_manager.login_view = "login_form"
 #     db.create_all()
 
 
-# @login_manager.user_loader
-# def load_user(user_id):
-#     """
-#     returns the object of the user id turned in
-#     """
-
-#     return Person.query.get(int(user_id))
-
-
-@app.before_first_request
-def init_app():
+@login_manager.user_loader
+def load_user(user_id):
     """
-    making sure user is logged out just in case of cookies
+    returns the object of the user id turned in
     """
 
-    logout_user()
+    return Person.query.get(int(user_id))
+
+
+# @app.before_first_request
+# def init_app():
+#     """
+#     making sure user is logged out just in case of cookies
+#     """
+
+#     logout_user()
 
 
 @app.route("/")
