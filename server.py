@@ -292,6 +292,7 @@ def suggest_page():
         #     top_three_states.append(rando)
         for i in range(3):
             top_three_states.append(top_states[i])
+            top_states.remove(top_states[i])
         for i, str in enumerate(top_three_states):
             top_three_states[i] = str.capitalize()
 
