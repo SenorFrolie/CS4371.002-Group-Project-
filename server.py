@@ -267,6 +267,11 @@ def suggest_page():
             state_message.append(state_obj.states[i]["message"])
             max_points -= 1
 
+    for i in top_states:
+        print(i, "\n")
+    for i in state_message:
+        print(i, "\n")
+
     if null_points >= 15:
         return flask.redirect(flask.url_for("sorry"))
     elif len(top_states) < 3:
@@ -279,7 +284,7 @@ def suggest_page():
             rando = random.choice(states)
             top_three_states.append(rando)
             states.remove(rando)
-            #messages.append(state_message[i])
+            # messages.append(state_message[i])
         for i, str in enumerate(top_three_states):
             top_three_states[i] = str.capitalize()
 
@@ -297,10 +302,14 @@ def suggest_page():
         #     rando = random.choice(top_states)
         #     top_states.remove(rando)
         #     top_three_states.append(rando)
-        for i in range(3):
-            top_three_states.append(top_states[i])
-            messages.append(state_message[i])
-            top_states.remove(top_states[i])
+        # for i in range(3):
+        #     top_three_states.append(top_states[i])
+        #     top_states.remove(top_states[i])
+        for i in top_states:
+            top_three_states.append(i)
+            top_states.remove(i)
+        for i in state_message:
+            messages.append(i)
         for i, str in enumerate(top_three_states):
             top_three_states[i] = str.capitalize()
 
