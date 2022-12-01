@@ -2,6 +2,8 @@
   <head>
     <link rel="stylesheet" href={{ url_for('static',
     filename='suggest_page.css') }} />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   </head>
 
   <header class="header_container front_page_header">
@@ -27,14 +29,11 @@
         </div>
   </header>
 
-  <body>
+  <body id="bootstrap-overrides" class="over">
     <br />
-    <h2>
+    <!-- <h2>
         {% if final %}
             <h1>Based on your answers, we think you might like these states: </h1>
-            <!-- {%  for i in final %}
-                <h2>State {{nums}}: {{i}}</h2>
-            {%  endfor %} -->
             {%  for i in range(3) %}
                 <h2>State #{{i + 1}}: {{final[i]}}</h2>
             {%  endfor %}
@@ -50,6 +49,67 @@
         {% if not final %}
             <h3>It looks like we had a hard time making a suggestion based on your answers, please try taking the quiz again.</h3>
         {% endif %}
-    </h2>
+    </h2> -->
+
+    <h2>these are your top three state suggestions</h2>
+    <h3>click a button to find out more</h3>
+
+    <!-- this is the dropdown stuff -->
+    <div class="row ">
+        <p>
+          <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1">{{final[0]}}</button>
+          <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">{{final[1]}}</button>
+          <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample3" aria-expanded="false" aria-controls="#multiCollapseExample3">{{final[2]}}</button>
+        </p>
+    </div>
+    <div class="row">
+      <!-- Username -->
+      <div class="collapse multi-collapse" id="multiCollapseExample1">
+        <div class="m-auto">
+          <div class="text-center">
+            <form class="m-auto" method="POST" action="/account_settings?f=f1">
+                <h1 class="m-4">{{final[0]}}</h1>
+                <label for="username" class="visually-hidden-focusable">Username</label>
+                <p>this is a placeholder for what it will actually be</p>
+            </form>
+        </div>
+        </div>
+      </div>
+    </div>
+    <!-- University -->
+    <div class="row">
+      <div class="collapse multi-collapse" id="multiCollapseExample2" >
+        <div class="m-auto">
+          <div class="text-center">
+            <form class="m-auto" method="POST" action="/account_settings?f=f2">
+                <h1 class="m-4">{{final[1]}}</h1>
+                <label for="university" class="visually-hidden-focusable">University</label>
+                <p>this is a placeholder for what it will actually be</p>
+            </form>
+        </div>
+      </div>
+    </div>
+    <!-- Password -->
+    <div class="row">
+      <div class="collapse multi-collapse" id="multiCollapseExample3">
+        <div class="m-auto">
+          <div class="text-center">
+            <form class="m-auto" method="POST" action="/account_settings?f=f3">
+                <h1 class="m-4">{{final[2]}}</h1>
+                <label for="password" class="visually-hidden-focusable">Username</label>
+                <p>this is a placeholder for what it will actually be</p>
+            </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
+    <!-- this is the end of the dropdown stuff -->
+  </div>
+
+     <!-- Option 1: Bootstrap Bundle with Popper -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
   </body>
 </html>
