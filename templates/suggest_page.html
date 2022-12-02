@@ -11,14 +11,14 @@
         <div class="left_inner_container">
             <ui class="left_nav_links">
                 <!--Addtional contant can added here for the future-->
-                <li ><a href="/Login"> Login </a></li>
-                <li ><a href="/about"> About Us </a></li>
+                <li ><a href="/Login" class="nav_buttons"> Login </a></li>
+                <li ><a href="/about" class="nav_buttons"> About Us </a></li>
             </ui>
         </div>
 
         <div class="center_inner_container">
             <!--add home url here-->
-            <a href="/#"> <title> My/State</title></a> 
+            <a href="/#"> <title class="title_home"> My/State</title></a>
         </div>
 
         <div class="right_inner_container">
@@ -70,7 +70,9 @@
             <form class="m-auto" method="POST" action="/account_settings?f=f1">
                 <h1 class="m-4">{{final[0]}}</h1>
                 <label for="username" class="visually-hidden-focusable">Username</label>
-                <p>{{messages[0]}}</p>
+                <h5 class="para">
+                  Your number one state we recommend is {{final[0]}}. {{final[0]}} is the state that most aligned with your preferences. {{final[0]}} will be the most optimal place for you to move to if it is not the place you are already living. {{final[0]}} Should be the obvious choice and will be a great place to move to.
+                </h5>
             </form>
         </div>
         </div>
@@ -84,7 +86,9 @@
             <form class="m-auto" method="POST" action="/account_settings?f=f2">
                 <h1 class="m-4">{{final[1]}}</h1>
                 <label for="university" class="visually-hidden-focusable">University</label>
-                <p>{{messages[1]}}</p>
+                <h5 class="para">
+                  {{final[1]}} is the second best place that you may want to move to. {{final[1]}} is the state that had not the most preferences aligned but it was still really good. {{final[1]}} may not be the obvious choice, but it should be a choice that makes sense now that you have thought about it. {{final[1]}} will still be a state that matches your preferences really well.
+                </h5>
             </form>
         </div>
       </div>
@@ -97,7 +101,9 @@
             <form class="m-auto" method="POST" action="/account_settings?f=f3">
                 <h1 class="m-4">{{final[2]}}</h1>
                 <label for="password" class="visually-hidden-focusable">Username</label>
-                <p>{{messages[2]}}</p>
+                <h5 class="para">
+                  {{final[2]}} is a state that you probably would never have though about moving to before. {{final[2]}} may not have been your first or second choice, however that is not a bad thing. {{final[2]}} is still top three out of fifty and you may be very surprised as to what you find in this state. Maybe you'll end up liking more than the first pick!
+                </h5>
             </form>
         </div>
       </div>
