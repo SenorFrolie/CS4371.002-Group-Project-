@@ -25,7 +25,7 @@ load_dotenv()
 app = flask.Flask(__name__)
 app.secret_key = "secret"
 app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DATABASE_URL")
-db = SQLAlchemy(app)
+#db = SQLAlchemy(app)
 app.config["TESTING"] = False
 
 # login config stuff
@@ -34,24 +34,24 @@ login_manager.init_app(app)
 login_manager.login_view = "login_form"
 
 
-class Person(UserMixin, db.Model):
-    """
-    this is the model of my users database
-    """
+# class Person(UserMixin, db.Model):
+#     """
+#     this is the model of my users database
+#     """
 
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(80), unique=True, nullable=False)
-    password = db.Column(db.String(80), unique=True, nullable=False)
+#     id = db.Column(db.Integer, primary_key=True)
+#     username = db.Column(db.String(80), unique=True, nullable=False)
+#     password = db.Column(db.String(80), unique=True, nullable=False)
 
-    def __repr__(self):
-        """
-        idk just good to have
-        """
-        return "<User %r>" % self.username
+#     def __repr__(self):
+#         """
+#         idk just good to have
+#         """
+#         return "<User %r>" % self.username
 
 
-with app.app_context():
-    db.create_all()
+# with app.app_context():
+#     db.create_all()
 
 
 @login_manager.user_loader
@@ -264,9 +264,6 @@ def suggest_page():
         if val == max_points:
             top_states.append(state_obj.states[i]["name"])
             max_points -= 1
-    
-    print("TOP STATES")
-    print(top_states)
 
     if null_points >= 15:
         return flask.redirect(flask.url_for("sorry"))
@@ -314,9 +311,6 @@ def suggest_page():
         for i in range(3):
             top_three_states.append(top_states[i])
 
-        # for i in top_states:
-        #     top_three_states.append(i)
-        #     top_states.remove(i)
         for i, str in enumerate(top_three_states):
             top_three_states[i] = str.capitalize()
 
