@@ -251,7 +251,6 @@ select{
 }
 
 
-
 .q_snow, .q_rural, .q_income_tax,
 .q_rainfall, .q_coastline, .q_high_or_low_income,
 .q_lib_Conser_climate, .q_uni, .q_mountains, .q_desert,
@@ -278,4 +277,27 @@ select{
     padding: 0.75em 2em 0.85em;
     display: inline-block;
     font-size: 1.2rem;
+}
+
+.title_home {
+    text-decoration: none !important;
+    color: white !important;
+}
+
+a:hover { 
+    text-decoration: none !important; 
+}
+
+
+a:active { 
+    text-decoration: none !important; 
+}
+
+a { 
+    text-decoration: none !important; 
+}
+
+.nav_buttons {
+    text-decoration: none !important;
+    color: white !important;
 }
