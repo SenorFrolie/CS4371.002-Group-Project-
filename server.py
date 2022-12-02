@@ -264,16 +264,19 @@ def suggest_page():
         if val == max_points:
             top_states.append(state_obj.states[i]["name"])
             max_points -= 1
+    
+    print("TOP STATES")
+    print(top_states)
 
     if null_points >= 15:
         return flask.redirect(flask.url_for("sorry"))
     elif not top_states:
         states = []
         top_three_states = []
-        
+
         for i in range(50):
             states.append(state_obj.states[i]["name"])
-        for i in range(3):
+        for i in range(4):
             rando = random.choice(states)
             top_three_states.append(rando)
             states.remove(rando)
@@ -285,15 +288,14 @@ def suggest_page():
             point=points,
             final=top_three_states,
             nums=numbers_for_display,
-            messages=messages,
         )
-    elif len(top_states) < 3:
+    elif len(top_states) <= 2:
         states = []
         top_three_states = []
 
         for i in range(50):
             states.append(state_obj.states[i]["name"])
-        for i in range(3):
+        for i in range(4):
             rando = random.choice(states)
             top_three_states.append(rando)
             states.remove(rando)
@@ -305,15 +307,16 @@ def suggest_page():
             point=points,
             final=top_three_states,
             nums=numbers_for_display,
-            messages=messages,
         )
-    elif top_states:
-        messages = []
+    elif len(top_states) >= 3:
         top_three_states = []
 
-        for i in top_states:
-            top_three_states.append(i)
-            top_states.remove(i)
+        for i in range(3):
+            top_three_states.append(top_states[i])
+
+        # for i in top_states:
+        #     top_three_states.append(i)
+        #     top_states.remove(i)
         for i, str in enumerate(top_three_states):
             top_three_states[i] = str.capitalize()
 
@@ -322,7 +325,6 @@ def suggest_page():
             point=points,
             final=top_three_states,
             nums=numbers_for_display,
-            messages=messages,
         )
 
     return flask.render_template("sorry.html")
